@@ -15,6 +15,35 @@
 		78251E1826AC6B6000C736A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78251E1626AC6B6000C736A6 /* LaunchScreen.storyboard */; };
 		78251E2326AC6B6000C736A6 /* SchemakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E2226AC6B6000C736A6 /* SchemakerTests.swift */; };
 		78251E2D26AC6B6000C736A6 /* SchemakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E2C26AC6B6000C736A6 /* SchemakerUITests.swift */; };
+		78251E3D26AC6F4900C736A6 /* ListSchemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E3C26AC6F4900C736A6 /* ListSchemaViewController.swift */; };
+		78251E3F26AC6F6500C736A6 /* ListSchemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E3E26AC6F6500C736A6 /* ListSchemaViewModel.swift */; };
+		78251E4126AC6FF000C736A6 /* ListSchemaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E4026AC6FF000C736A6 /* ListSchemaViewController.xib */; };
+		78251E4726AC728300C736A6 /* ListSchemaTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E4526AC728300C736A6 /* ListSchemaTextCell.swift */; };
+		78251E4826AC728300C736A6 /* ListSchemaTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E4626AC728300C736A6 /* ListSchemaTextCell.xib */; };
+		78251E4C26AC72A600C736A6 /* ListSchemaImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E4A26AC72A600C736A6 /* ListSchemaImageCell.swift */; };
+		78251E4D26AC72A600C736A6 /* ListSchemaImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E4B26AC72A600C736A6 /* ListSchemaImageCell.xib */; };
+		78251E5126AC73D900C736A6 /* ListSchemaAddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E4F26AC73D900C736A6 /* ListSchemaAddItemCell.swift */; };
+		78251E5226AC73D900C736A6 /* ListSchemaAddItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E5026AC73D900C736A6 /* ListSchemaAddItemCell.xib */; };
+		78251E5626AC75DC00C736A6 /* ItemPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E5526AC75DC00C736A6 /* ItemPreviewViewController.swift */; };
+		78251E5826AC760B00C736A6 /* ItemPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E5726AC760B00C736A6 /* ItemPreviewViewController.xib */; };
+		78251E5C26AC776000C736A6 /* CommonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E5B26AC776000C736A6 /* CommonContentView.swift */; };
+		78251E6026AC898B00C736A6 /* ItemPreviewTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E5F26AC898B00C736A6 /* ItemPreviewTextContentView.swift */; };
+		78251E6226AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */; };
+		78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E6426AC8A7600C736A6 /* SchemasListViewController.swift */; };
+		78251E6826AC8A9700C736A6 /* SchemasListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E6726AC8A9700C736A6 /* SchemasListViewController.xib */; };
+		78251E6C26ACA98100C736A6 /* SchemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E6A26ACA98100C736A6 /* SchemaCell.swift */; };
+		78251E6D26ACA98100C736A6 /* SchemaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251E6B26ACA98100C736A6 /* SchemaCell.xib */; };
+		78251E6F26ACA9A800C736A6 /* SchemasListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E6E26ACA9A800C736A6 /* SchemasListViewModel.swift */; };
+		78251E7126ACAA4900C736A6 /* SchemasListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E7026ACAA4900C736A6 /* SchemasListRouter.swift */; };
+		78251E7426ACAD7000C736A6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E7326ACAD7000C736A6 /* UIColor+Extension.swift */; };
+		78251E7626ACAE4400C736A6 /* SchemasListCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E7526ACAE4400C736A6 /* SchemasListCollectionViewManager.swift */; };
+		78251E7C26ACB01800C736A6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E7B26ACB01800C736A6 /* UICollectionView+Extension.swift */; };
+		78251E8226ACBB2000C736A6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 78251E8126ACBB2000C736A6 /* RxCocoa */; };
+		78251E8426ACBB2000C736A6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 78251E8326ACBB2000C736A6 /* RxSwift */; };
+		78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8626ACBB5100C736A6 /* SchemaCellModel.swift */; };
+		78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */; };
+		78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8B26ACC2E400C736A6 /* Array+Extension.swift */; };
+		78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +76,33 @@
 		78251E2226AC6B6000C736A6 /* SchemakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemakerTests.swift; sourceTree = "<group>"; };
 		78251E2826AC6B6000C736A6 /* SchemakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchemakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78251E2C26AC6B6000C736A6 /* SchemakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemakerUITests.swift; sourceTree = "<group>"; };
+		78251E3C26AC6F4900C736A6 /* ListSchemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaViewController.swift; sourceTree = "<group>"; };
+		78251E3E26AC6F6500C736A6 /* ListSchemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaViewModel.swift; sourceTree = "<group>"; };
+		78251E4026AC6FF000C736A6 /* ListSchemaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSchemaViewController.xib; sourceTree = "<group>"; };
+		78251E4526AC728300C736A6 /* ListSchemaTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaTextCell.swift; sourceTree = "<group>"; };
+		78251E4626AC728300C736A6 /* ListSchemaTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSchemaTextCell.xib; sourceTree = "<group>"; };
+		78251E4A26AC72A600C736A6 /* ListSchemaImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaImageCell.swift; sourceTree = "<group>"; };
+		78251E4B26AC72A600C736A6 /* ListSchemaImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSchemaImageCell.xib; sourceTree = "<group>"; };
+		78251E4F26AC73D900C736A6 /* ListSchemaAddItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaAddItemCell.swift; sourceTree = "<group>"; };
+		78251E5026AC73D900C736A6 /* ListSchemaAddItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSchemaAddItemCell.xib; sourceTree = "<group>"; };
+		78251E5526AC75DC00C736A6 /* ItemPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewViewController.swift; sourceTree = "<group>"; };
+		78251E5726AC760B00C736A6 /* ItemPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPreviewViewController.xib; sourceTree = "<group>"; };
+		78251E5B26AC776000C736A6 /* CommonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonContentView.swift; sourceTree = "<group>"; };
+		78251E5F26AC898B00C736A6 /* ItemPreviewTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewTextContentView.swift; sourceTree = "<group>"; };
+		78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewDrawingContentView.swift; sourceTree = "<group>"; };
+		78251E6426AC8A7600C736A6 /* SchemasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListViewController.swift; sourceTree = "<group>"; };
+		78251E6726AC8A9700C736A6 /* SchemasListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchemasListViewController.xib; sourceTree = "<group>"; };
+		78251E6A26ACA98100C736A6 /* SchemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaCell.swift; sourceTree = "<group>"; };
+		78251E6B26ACA98100C736A6 /* SchemaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchemaCell.xib; sourceTree = "<group>"; };
+		78251E6E26ACA9A800C736A6 /* SchemasListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListViewModel.swift; sourceTree = "<group>"; };
+		78251E7026ACAA4900C736A6 /* SchemasListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListRouter.swift; sourceTree = "<group>"; };
+		78251E7326ACAD7000C736A6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		78251E7526ACAE4400C736A6 /* SchemasListCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListCollectionViewManager.swift; sourceTree = "<group>"; };
+		78251E7B26ACB01800C736A6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		78251E8626ACBB5100C736A6 /* SchemaCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaCellModel.swift; sourceTree = "<group>"; };
+		78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListCellModelFactory.swift; sourceTree = "<group>"; };
+		78251E8B26ACC2E400C736A6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78251E8426ACBB2000C736A6 /* RxSwift in Frameworks */,
+				78251E8226ACBB2000C736A6 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +155,11 @@
 		78251E0A26AC6B5F00C736A6 /* Schemaker */ = {
 			isa = PBXGroup;
 			children = (
-				78251E0B26AC6B5F00C736A6 /* AppDelegate.swift */,
-				78251E0D26AC6B5F00C736A6 /* SceneDelegate.swift */,
+				78251E3B26AC6EF900C736A6 /* SupportFiles */,
+				78251E3A26AC6EDF00C736A6 /* Services */,
+				78251E3926AC6ECD00C736A6 /* PresentationModules */,
 				78251E0F26AC6B5F00C736A6 /* ViewController.swift */,
 				78251E1126AC6B5F00C736A6 /* Main.storyboard */,
-				78251E1426AC6B6000C736A6 /* Assets.xcassets */,
-				78251E1626AC6B6000C736A6 /* LaunchScreen.storyboard */,
 				78251E1926AC6B6000C736A6 /* Info.plist */,
 			);
 			path = Schemaker;
@@ -124,6 +181,202 @@
 			path = SchemakerUITests;
 			sourceTree = "<group>";
 		};
+		78251E3926AC6ECD00C736A6 /* PresentationModules */ = {
+			isa = PBXGroup;
+			children = (
+				78251E6326AC8A3400C736A6 /* SchemasList */,
+				78251E5426AC745C00C736A6 /* ItemPreview */,
+				78251E5326AC744900C736A6 /* ListSchema */,
+			);
+			path = PresentationModules;
+			sourceTree = "<group>";
+		};
+		78251E3A26AC6EDF00C736A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		78251E3B26AC6EF900C736A6 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				78251E7226ACAD6100C736A6 /* Extensions */,
+				78251E0B26AC6B5F00C736A6 /* AppDelegate.swift */,
+				78251E0D26AC6B5F00C736A6 /* SceneDelegate.swift */,
+				78251E1426AC6B6000C736A6 /* Assets.xcassets */,
+				78251E1626AC6B6000C736A6 /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		78251E4226AC700200C736A6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4326AC71E200C736A6 /* Cells */,
+				78251E4026AC6FF000C736A6 /* ListSchemaViewController.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		78251E4326AC71E200C736A6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4E26AC737D00C736A6 /* AddItemCell */,
+				78251E4926AC728E00C736A6 /* ImageCell */,
+				78251E4426AC71F300C736A6 /* TextCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		78251E4426AC71F300C736A6 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4526AC728300C736A6 /* ListSchemaTextCell.swift */,
+				78251E4626AC728300C736A6 /* ListSchemaTextCell.xib */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		78251E4926AC728E00C736A6 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4A26AC72A600C736A6 /* ListSchemaImageCell.swift */,
+				78251E4B26AC72A600C736A6 /* ListSchemaImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		78251E4E26AC737D00C736A6 /* AddItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4F26AC73D900C736A6 /* ListSchemaAddItemCell.swift */,
+				78251E5026AC73D900C736A6 /* ListSchemaAddItemCell.xib */,
+			);
+			path = AddItemCell;
+			sourceTree = "<group>";
+		};
+		78251E5326AC744900C736A6 /* ListSchema */ = {
+			isa = PBXGroup;
+			children = (
+				78251E4226AC700200C736A6 /* Components */,
+				78251E3C26AC6F4900C736A6 /* ListSchemaViewController.swift */,
+				78251E3E26AC6F6500C736A6 /* ListSchemaViewModel.swift */,
+			);
+			path = ListSchema;
+			sourceTree = "<group>";
+		};
+		78251E5426AC745C00C736A6 /* ItemPreview */ = {
+			isa = PBXGroup;
+			children = (
+				78251E5926AC772F00C736A6 /* Components */,
+				78251E5526AC75DC00C736A6 /* ItemPreviewViewController.swift */,
+			);
+			path = ItemPreview;
+			sourceTree = "<group>";
+		};
+		78251E5926AC772F00C736A6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				78251E5A26AC773800C736A6 /* ContentViews */,
+				78251E5726AC760B00C736A6 /* ItemPreviewViewController.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		78251E5A26AC773800C736A6 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				78251E5E26AC789300C736A6 /* DrawingContent */,
+				78251E5D26AC788100C736A6 /* TextContent */,
+				78251E5B26AC776000C736A6 /* CommonContentView.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		78251E5D26AC788100C736A6 /* TextContent */ = {
+			isa = PBXGroup;
+			children = (
+				78251E5F26AC898B00C736A6 /* ItemPreviewTextContentView.swift */,
+			);
+			path = TextContent;
+			sourceTree = "<group>";
+		};
+		78251E5E26AC789300C736A6 /* DrawingContent */ = {
+			isa = PBXGroup;
+			children = (
+				78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */,
+			);
+			path = DrawingContent;
+			sourceTree = "<group>";
+		};
+		78251E6326AC8A3400C736A6 /* SchemasList */ = {
+			isa = PBXGroup;
+			children = (
+				78251E6626AC8A8700C736A6 /* Components */,
+				78251E6426AC8A7600C736A6 /* SchemasListViewController.swift */,
+				78251E6E26ACA9A800C736A6 /* SchemasListViewModel.swift */,
+				78251E7026ACAA4900C736A6 /* SchemasListRouter.swift */,
+			);
+			path = SchemasList;
+			sourceTree = "<group>";
+		};
+		78251E6626AC8A8700C736A6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				78251E8826ACBC5D00C736A6 /* Factory */,
+				78251E8526ACBB3D00C736A6 /* Models */,
+				78251E7726ACAE4900C736A6 /* Managers */,
+				78251E6926AC8AA000C736A6 /* SchemaCell */,
+				78251E6726AC8A9700C736A6 /* SchemasListViewController.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		78251E6926AC8AA000C736A6 /* SchemaCell */ = {
+			isa = PBXGroup;
+			children = (
+				78251E6A26ACA98100C736A6 /* SchemaCell.swift */,
+				78251E6B26ACA98100C736A6 /* SchemaCell.xib */,
+			);
+			path = SchemaCell;
+			sourceTree = "<group>";
+		};
+		78251E7226ACAD6100C736A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78251E7326ACAD7000C736A6 /* UIColor+Extension.swift */,
+				78251E7B26ACB01800C736A6 /* UICollectionView+Extension.swift */,
+				78251E8B26ACC2E400C736A6 /* Array+Extension.swift */,
+				78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78251E7726ACAE4900C736A6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				78251E7526ACAE4400C736A6 /* SchemasListCollectionViewManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		78251E8526ACBB3D00C736A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78251E8626ACBB5100C736A6 /* SchemaCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78251E8826ACBC5D00C736A6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +393,10 @@
 			dependencies = (
 			);
 			name = Schemaker;
+			packageProductDependencies = (
+				78251E8126ACBB2000C736A6 /* RxCocoa */,
+				78251E8326ACBB2000C736A6 /* RxSwift */,
+			);
 			productName = Schemaker;
 			productReference = 78251E0826AC6B5F00C736A6 /* Schemaker.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +469,9 @@
 				Base,
 			);
 			mainGroup = 78251DFF26AC6B5F00C736A6;
+			packageReferences = (
+				78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 78251E0926AC6B5F00C736A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,8 +489,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				78251E1826AC6B6000C736A6 /* LaunchScreen.storyboard in Resources */,
+				78251E4126AC6FF000C736A6 /* ListSchemaViewController.xib in Resources */,
+				78251E4D26AC72A600C736A6 /* ListSchemaImageCell.xib in Resources */,
 				78251E1526AC6B6000C736A6 /* Assets.xcassets in Resources */,
+				78251E5226AC73D900C736A6 /* ListSchemaAddItemCell.xib in Resources */,
 				78251E1326AC6B5F00C736A6 /* Main.storyboard in Resources */,
+				78251E6D26ACA98100C736A6 /* SchemaCell.xib in Resources */,
+				78251E6826AC8A9700C736A6 /* SchemasListViewController.xib in Resources */,
+				78251E5826AC760B00C736A6 /* ItemPreviewViewController.xib in Resources */,
+				78251E4826AC728300C736A6 /* ListSchemaTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,9 +522,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78251E6C26ACA98100C736A6 /* SchemaCell.swift in Sources */,
 				78251E1026AC6B5F00C736A6 /* ViewController.swift in Sources */,
+				78251E6226AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift in Sources */,
+				78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */,
+				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
+				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
+				78251E7126ACAA4900C736A6 /* SchemasListRouter.swift in Sources */,
+				78251E7426ACAD7000C736A6 /* UIColor+Extension.swift in Sources */,
+				78251E7626ACAE4400C736A6 /* SchemasListCollectionViewManager.swift in Sources */,
+				78251E4C26AC72A600C736A6 /* ListSchemaImageCell.swift in Sources */,
+				78251E4726AC728300C736A6 /* ListSchemaTextCell.swift in Sources */,
+				78251E6026AC898B00C736A6 /* ItemPreviewTextContentView.swift in Sources */,
+				78251E5626AC75DC00C736A6 /* ItemPreviewViewController.swift in Sources */,
+				78251E5126AC73D900C736A6 /* ListSchemaAddItemCell.swift in Sources */,
+				78251E5C26AC776000C736A6 /* CommonContentView.swift in Sources */,
+				78251E3D26AC6F4900C736A6 /* ListSchemaViewController.swift in Sources */,
+				78251E6F26ACA9A800C736A6 /* SchemasListViewModel.swift in Sources */,
 				78251E0C26AC6B5F00C736A6 /* AppDelegate.swift in Sources */,
 				78251E0E26AC6B5F00C736A6 /* SceneDelegate.swift in Sources */,
+				78251E7C26ACB01800C736A6 /* UICollectionView+Extension.swift in Sources */,
+				78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */,
+				78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */,
+				78251E3F26AC6F6500C736A6 /* ListSchemaViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +725,9 @@
 				DEVELOPMENT_TEAM = G3P284NUFU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Schemaker/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,9 +753,9 @@
 				DEVELOPMENT_TEAM = G3P284NUFU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Schemaker/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -620,6 +907,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78251E8126ACBB2000C736A6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		78251E8326ACBB2000C736A6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78251E0026AC6B5F00C736A6 /* Project object */;
 }
