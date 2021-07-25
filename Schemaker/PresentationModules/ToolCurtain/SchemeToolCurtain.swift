@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class SchemeToolCurtain: UIView {
+final class SchemeToolCurtain: Curtain {
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var collectionView: UICollectionView!
     
@@ -20,7 +20,7 @@ final class SchemeToolCurtain: UIView {
     
     init(viewModel: ISchemeToolCurtainViewModel) {
         self.viewModel = viewModel
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        super.init(frame: Constants.baseFrame, smallestVisiblePart: PublicConstants.alwaysVisiblePartHeight)
         commonInit()
         bind()
         viewModel.input.loadContent()
@@ -29,6 +29,11 @@ final class SchemeToolCurtain: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureUI()
+    }
 }
 
 extension SchemeToolCurtain {
@@ -36,6 +41,13 @@ extension SchemeToolCurtain {
         Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
+    }
+    
+    private func configureUI() {
+        let cornerRadius: CGFloat = 16
+        contentView.layer.cornerRadius = cornerRadius
+        layer.cornerRadius = cornerRadius
+        layer.addShadow(radius: 10, rect: bounds)
     }
     
     private func bind() {
@@ -50,5 +62,9 @@ extension SchemeToolCurtain {
 extension SchemeToolCurtain {
     struct PublicConstants {
         static let alwaysVisiblePartHeight: CGFloat = 19
+    }
+    
+    private struct Constants {
+        static let baseFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200)
     }
 }

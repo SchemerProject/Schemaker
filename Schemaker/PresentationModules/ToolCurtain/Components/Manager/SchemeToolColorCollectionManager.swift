@@ -23,6 +23,7 @@ final class SchemeToolColorCollectionManager: NSObject, ISchemeToolColorCollecti
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
         super.init()
+        configureCollectionView()
     }
 }
 
@@ -41,6 +42,10 @@ extension SchemeToolColorCollectionManager: UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return dataSource[safe: indexPath.row]?.size ?? .zero
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
 }
 
 extension SchemeToolColorCollectionManager {
@@ -49,5 +54,6 @@ extension SchemeToolColorCollectionManager {
         collectionView?.dataSource = self
         
         collectionView?.register(cellType: ToolCurtainColorCell.self)
+        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
     }
 }

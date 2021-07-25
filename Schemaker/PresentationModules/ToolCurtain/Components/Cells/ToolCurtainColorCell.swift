@@ -22,6 +22,6 @@ final class ToolCurtainColorCell: UICollectionViewCell {
 extension ToolCurtainColorCell {
     private func configureUI() {
         layer.cornerRadius = frame.height / 2
-        layer.addShadow(radius: 3, rect: layer.bounds)
+        layer.addShadow(radius: 6, rect: layer.bounds)
     }
 }

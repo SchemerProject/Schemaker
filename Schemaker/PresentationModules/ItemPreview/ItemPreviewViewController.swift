@@ -35,6 +35,7 @@ extension ItemPreviewViewController {
     private func configureUI() {
         configureBlur()
         configureContent()
+        configureToolCurtain()
     }
     
     private func configureBlur() {
@@ -58,11 +59,5 @@ extension ItemPreviewViewController {
         let curtain = SchemeToolCurtain(viewModel: viewModel)
         curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
         view.addSubview(curtain)
-    }
-}
-
-extension ItemPreviewViewController {
-    private func animateCurtain(isOpen: Bool) {
-        
     }
 }

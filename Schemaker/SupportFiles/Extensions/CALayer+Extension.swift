@@ -15,6 +15,6 @@ extension CALayer {
         shadowOpacity = 0.2
         shadowOffset = .zero
         shadowRadius = radius
-        shadowPath = UIBezierPath(rect: rect).cgPath
+        shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).cgPath
     }
 }

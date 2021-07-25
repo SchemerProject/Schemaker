@@ -58,6 +58,7 @@
 		78251EB026AE027000C736A6 /* SchemeToolColorCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EAF26AE027000C736A6 /* SchemeToolColorCollectionManager.swift */; };
 		78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */; };
 		78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */; };
+		78251EB926AE205500C736A6 /* Curtain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB826AE205500C736A6 /* Curtain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		78251EAF26AE027000C736A6 /* SchemeToolColorCollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolColorCollectionManager.swift; sourceTree = "<group>"; };
 		78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorModel.swift; sourceTree = "<group>"; };
 		78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorCellModelFactory.swift; sourceTree = "<group>"; };
+		78251EB826AE205500C736A6 /* Curtain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		78251E3926AC6ECD00C736A6 /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
+				78251EB726AE204400C736A6 /* Common */,
 				78251E9F26ADFB6500C736A6 /* ToolCurtain */,
 				78251E6326AC8A3400C736A6 /* SchemasList */,
 				78251E5426AC745C00C736A6 /* ItemPreview */,
@@ -491,6 +494,14 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		78251EB726AE204400C736A6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				78251EB826AE205500C736A6 /* Curtain.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -645,6 +656,7 @@
 				78251EA126ADFB7600C736A6 /* SchemeToolCurtain.swift in Sources */,
 				78251E6226AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift in Sources */,
 				78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */,
+				78251EB926AE205500C736A6 /* Curtain.swift in Sources */,
 				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
 				78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */,
 				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
