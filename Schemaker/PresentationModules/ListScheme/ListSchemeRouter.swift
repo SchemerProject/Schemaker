@@ -22,6 +22,9 @@ final class ListSchemeRouter {
 
 extension ListSchemeRouter: IListSchemeRouter {
     func openNewItemPreview(type: ItemFactory) {
-        
+        let contentView = ItemPreviewDrawingContentView()
+        let viewController = ItemPreviewViewController(contentView: contentView)
+        viewController.modalPresentationStyle = .overCurrentContext
+        controller?.present(viewController, animated: true, completion: nil)
     }
 }

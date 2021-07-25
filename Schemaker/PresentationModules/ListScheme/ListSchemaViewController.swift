@@ -42,5 +42,11 @@ extension ListSchemaViewController {
             self.tableManager.dataSource = items
         })
             .disposed(by: disposeBag)
+        
+        viewModel.output.openItemFactoryObservable.subscribe(onNext: { [weak self] type in
+            guard let self = self else { return }
+            self.router.openNewItemPreview(type: type)
+        })
+            .disposed(by: disposeBag)
     }
 }
