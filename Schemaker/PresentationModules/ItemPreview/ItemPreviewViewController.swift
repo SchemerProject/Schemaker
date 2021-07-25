@@ -52,4 +52,17 @@ extension ItemPreviewViewController {
         contentView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: -200).isActive = true
         contentView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32).isActive = true
     }
+    
+    private func configureToolCurtain() {
+        let viewModel = SchemeToolCurtainViewModel()
+        let curtain = SchemeToolCurtain(viewModel: viewModel)
+        curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
+        view.addSubview(curtain)
+    }
+}
+
+extension ItemPreviewViewController {
+    private func animateCurtain(isOpen: Bool) {
+        
+    }
 }
