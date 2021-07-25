@@ -15,11 +15,11 @@ final class SchemasListCollectionViewManager: NSObject, ISchemasListCollectionVi
     
     var dataSource: [ISchemaCellModel] = [] {
         didSet {
-            collectionView.reloadData()
+            collectionView?.reloadData()
         }
     }
     
-    private unowned var collectionView: UICollectionView
+    private weak var collectionView: UICollectionView?
     
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
@@ -52,8 +52,8 @@ extension SchemasListCollectionViewManager: UICollectionViewDelegate, UICollecti
 
 extension SchemasListCollectionViewManager {
     private func configureCollectionView() {
-        collectionView.register(cellType: SchemaCell.self)
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView?.register(cellType: SchemaCell.self)
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
     }
 }

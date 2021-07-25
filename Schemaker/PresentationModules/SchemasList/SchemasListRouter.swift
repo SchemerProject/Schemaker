@@ -28,6 +28,8 @@ extension SchemaListRouter: ISchemaListRouter {
     }
     
     func openCreateSchema() {
-        
+        let viewModel = ListSchemaViewModel()
+        let viewController = ListSchemaViewController(viewModel: viewModel)
+        controller?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

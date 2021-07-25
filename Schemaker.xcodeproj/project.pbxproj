@@ -44,6 +44,12 @@
 		78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */; };
 		78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8B26ACC2E400C736A6 /* Array+Extension.swift */; };
 		78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */; };
+		78251E9226ACD48900C736A6 /* AddItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9126ACD48900C736A6 /* AddItemModel.swift */; };
+		78251E9526ACD4F500C736A6 /* SchemaItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9426ACD4F500C736A6 /* SchemaItemModel.swift */; };
+		78251E9726ACD52300C736A6 /* ListSchemaCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9626ACD52300C736A6 /* ListSchemaCellModelFactory.swift */; };
+		78251E9A26ACD60800C736A6 /* ListSchemeTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9926ACD60800C736A6 /* ListSchemeTableManager.swift */; };
+		78251E9C26ACD72200C736A6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9B26ACD72200C736A6 /* UITableView+Extension.swift */; };
+		78251E9E26AD810300C736A6 /* ListSchemeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251E9D26AD810300C736A6 /* ListSchemeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,12 @@
 		78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemasListCellModelFactory.swift; sourceTree = "<group>"; };
 		78251E8B26ACC2E400C736A6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		78251E9126ACD48900C736A6 /* AddItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModel.swift; sourceTree = "<group>"; };
+		78251E9426ACD4F500C736A6 /* SchemaItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaItemModel.swift; sourceTree = "<group>"; };
+		78251E9626ACD52300C736A6 /* ListSchemaCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemaCellModelFactory.swift; sourceTree = "<group>"; };
+		78251E9926ACD60800C736A6 /* ListSchemeTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemeTableManager.swift; sourceTree = "<group>"; };
+		78251E9B26ACD72200C736A6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		78251E9D26AD810300C736A6 /* ListSchemeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchemeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +198,7 @@
 			children = (
 				78251E6326AC8A3400C736A6 /* SchemasList */,
 				78251E5426AC745C00C736A6 /* ItemPreview */,
-				78251E5326AC744900C736A6 /* ListSchema */,
+				78251E5326AC744900C736A6 /* ListScheme */,
 			);
 			path = PresentationModules;
 			sourceTree = "<group>";
@@ -201,11 +213,11 @@
 		78251E3B26AC6EF900C736A6 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				78251E7226ACAD6100C736A6 /* Extensions */,
 				78251E0B26AC6B5F00C736A6 /* AppDelegate.swift */,
 				78251E0D26AC6B5F00C736A6 /* SceneDelegate.swift */,
 				78251E1426AC6B6000C736A6 /* Assets.xcassets */,
 				78251E1626AC6B6000C736A6 /* LaunchScreen.storyboard */,
+				78251E7226ACAD6100C736A6 /* Extensions */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -213,6 +225,9 @@
 		78251E4226AC700200C736A6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				78251E9826ACD5ED00C736A6 /* Manager */,
+				78251E9326ACD49800C736A6 /* Factory */,
+				78251E9026ACD47F00C736A6 /* Models */,
 				78251E4326AC71E200C736A6 /* Cells */,
 				78251E4026AC6FF000C736A6 /* ListSchemaViewController.xib */,
 			);
@@ -256,14 +271,15 @@
 			path = AddItemCell;
 			sourceTree = "<group>";
 		};
-		78251E5326AC744900C736A6 /* ListSchema */ = {
+		78251E5326AC744900C736A6 /* ListScheme */ = {
 			isa = PBXGroup;
 			children = (
 				78251E4226AC700200C736A6 /* Components */,
 				78251E3C26AC6F4900C736A6 /* ListSchemaViewController.swift */,
 				78251E3E26AC6F6500C736A6 /* ListSchemaViewModel.swift */,
+				78251E9D26AD810300C736A6 /* ListSchemeRouter.swift */,
 			);
-			path = ListSchema;
+			path = ListScheme;
 			sourceTree = "<group>";
 		};
 		78251E5426AC745C00C736A6 /* ItemPreview */ = {
@@ -349,6 +365,7 @@
 				78251E7B26ACB01800C736A6 /* UICollectionView+Extension.swift */,
 				78251E8B26ACC2E400C736A6 /* Array+Extension.swift */,
 				78251E8D26ACCA2400C736A6 /* CALayer+Extension.swift */,
+				78251E9B26ACD72200C736A6 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +392,31 @@
 				78251E8926ACBC7B00C736A6 /* SchemasListCellModelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		78251E9026ACD47F00C736A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78251E9126ACD48900C736A6 /* AddItemModel.swift */,
+				78251E9426ACD4F500C736A6 /* SchemaItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78251E9326ACD49800C736A6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				78251E9626ACD52300C736A6 /* ListSchemaCellModelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		78251E9826ACD5ED00C736A6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				78251E9926ACD60800C736A6 /* ListSchemeTableManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,9 +571,11 @@
 				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
 				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
 				78251E7126ACAA4900C736A6 /* SchemasListRouter.swift in Sources */,
+				78251E9A26ACD60800C736A6 /* ListSchemeTableManager.swift in Sources */,
 				78251E7426ACAD7000C736A6 /* UIColor+Extension.swift in Sources */,
 				78251E7626ACAE4400C736A6 /* SchemasListCollectionViewManager.swift in Sources */,
 				78251E4C26AC72A600C736A6 /* ListSchemaImageCell.swift in Sources */,
+				78251E9E26AD810300C736A6 /* ListSchemeRouter.swift in Sources */,
 				78251E4726AC728300C736A6 /* ListSchemaTextCell.swift in Sources */,
 				78251E6026AC898B00C736A6 /* ItemPreviewTextContentView.swift in Sources */,
 				78251E5626AC75DC00C736A6 /* ItemPreviewViewController.swift in Sources */,
@@ -539,11 +583,15 @@
 				78251E5C26AC776000C736A6 /* CommonContentView.swift in Sources */,
 				78251E3D26AC6F4900C736A6 /* ListSchemaViewController.swift in Sources */,
 				78251E6F26ACA9A800C736A6 /* SchemasListViewModel.swift in Sources */,
+				78251E9526ACD4F500C736A6 /* SchemaItemModel.swift in Sources */,
 				78251E0C26AC6B5F00C736A6 /* AppDelegate.swift in Sources */,
 				78251E0E26AC6B5F00C736A6 /* SceneDelegate.swift in Sources */,
 				78251E7C26ACB01800C736A6 /* UICollectionView+Extension.swift in Sources */,
 				78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */,
+				78251E9C26ACD72200C736A6 /* UITableView+Extension.swift in Sources */,
+				78251E9726ACD52300C736A6 /* ListSchemaCellModelFactory.swift in Sources */,
 				78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */,
+				78251E9226ACD48900C736A6 /* AddItemModel.swift in Sources */,
 				78251E3F26AC6F6500C736A6 /* ListSchemaViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

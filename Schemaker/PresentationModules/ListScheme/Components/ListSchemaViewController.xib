@@ -8,7 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListSchemaViewController" customModule="Schemaker" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="dwT-ZX-ygw" id="qJI-Va-lJn"/>
+                <outlet property="view" destination="iN0-l3-epB" id="raR-uY-qgj"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>

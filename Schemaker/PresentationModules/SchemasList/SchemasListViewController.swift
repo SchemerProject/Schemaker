@@ -11,7 +11,9 @@ import RxCocoa
 
 final class SchemasListViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var createSchemeButton: UIButton!
     
+    private lazy var router: ISchemaListRouter = SchemaListRouter(controller: self)
     private lazy var collectionViewManager: ISchemasListCollectionViewManager = SchemasListCollectionViewManager(collectionView: collectionView)
     private let viewModel: ISchemasListViewModel
     
@@ -39,6 +41,12 @@ extension SchemasListViewController {
         viewModel.output.schemesObservable.subscribe(onNext: { [weak self] schemes in
             guard let self = self else { return }
             self.collectionViewManager.dataSource = schemes
+        })
+            .disposed(by: disposeBag)
+        
+        createSchemeButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else { return }
+            self.router.openCreateSchema()
         })
             .disposed(by: disposeBag)
     }

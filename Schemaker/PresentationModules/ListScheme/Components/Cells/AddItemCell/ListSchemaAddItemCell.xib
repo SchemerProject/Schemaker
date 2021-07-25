@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19129"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="ListSchemaAddItemCell" customModule="Schemaker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aN4-iz-iZR">
+                        <rect key="frame" x="121.5" y="8" width="118" height="55"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26N-MU-l4S">
+                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Vtt-Qz-1FR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Text"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpx-XW-LIx">
+                                <rect key="frame" x="63" y="0.0" width="55" height="55"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Drawing"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aN4-iz-iZR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Avd-fJ-Nh4"/>
+                    <constraint firstAttribute="bottom" secondItem="aN4-iz-iZR" secondAttribute="bottom" constant="8" id="UnJ-cI-Utb"/>
+                    <constraint firstItem="aN4-iz-iZR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="uVt-ks-GC5"/>
+                    <constraint firstItem="aN4-iz-iZR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xkG-CL-FkT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addImageItemButton" destination="Rpx-XW-LIx" id="SxX-MJ-1OX"/>
+                <outlet property="addTextItemButton" destination="26N-MU-l4S" id="yMc-iv-bWu"/>
+            </connections>
+            <point key="canvasLocation" x="167.39130434782609" y="102.79017857142857"/>
+        </tableViewCell>
+    </objects>
+</document>
