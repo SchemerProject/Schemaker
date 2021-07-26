@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IListSchemaCellModelFactory {
     func create() -> [ISchemaItemModel]
@@ -13,6 +14,6 @@ protocol IListSchemaCellModelFactory {
 
 final class ListSchemaCellModelFactory: IListSchemaCellModelFactory {
     func create() -> [ISchemaItemModel] {
-        return [AddItemModel()]
+        return [AddItemModel(height: nil), ImageItem(height: 600)]
     }
 }

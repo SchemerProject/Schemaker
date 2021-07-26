@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ItemPreviewViewController: UIViewController {
     
     private let contentView: CommonContentView
+    private let viewModel: IItemPreviewViewModel
     
-    init(contentView: CommonContentView) {
+    private let disposeBag = DisposeBag()
+    
+    init(contentView: CommonContentView, viewModel: IItemPreviewViewModel) {
         self.contentView = contentView
+        self.viewModel = viewModel
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
@@ -22,6 +28,7 @@ final class ItemPreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindToContentOutput()
         configureUI()
     }
     
@@ -59,5 +66,11 @@ extension ItemPreviewViewController {
         let curtain = SchemeToolCurtain(viewModel: viewModel)
         curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
         view.addSubview(curtain)
+    }
+    
+    private func bindToContentOutput() {
+        contentView.outputSubject
+            .bind(to: viewModel.input.currentOutput)
+            .disposed(by: disposeBag)
     }
 }

@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ItemPreviewDrawingContentView: CommonContentView {
     
-    private var lineLayers: [[CGPoint]] = []
+    let outputSubject = PublishSubject<ICommonOutput>()
     
-    init() {
+    private var currentOutput: DrawingOutput {
+        return DrawingOutput(points: lineLayers, size: bounds.size)
+    }
+    
+    private var lineLayers: [[CGPoint]]
+    
+    init(lineLayers: [[CGPoint]]) {
+        self.lineLayers = lineLayers
         super.init(frame: .zero)
         backgroundColor = .white
     }
@@ -54,6 +63,8 @@ final class ItemPreviewDrawingContentView: CommonContentView {
         guard let newPoint = touches.first?.location(in: self), var lastLayer = lineLayers.popLast() else { return }
         lastLayer.append(newPoint)
         lineLayers.append(lastLayer)
+        
+        outputSubject.onNext(currentOutput)
         
         setNeedsDisplay()
     }

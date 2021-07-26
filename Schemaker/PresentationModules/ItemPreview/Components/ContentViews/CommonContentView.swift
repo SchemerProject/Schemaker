@@ -6,7 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 typealias CommonContentView = UIView & ICommonContentView
 
-protocol ICommonContentView {}
+protocol ICommonContentView {
+    var outputSubject: PublishSubject<ICommonOutput> { get }
+}

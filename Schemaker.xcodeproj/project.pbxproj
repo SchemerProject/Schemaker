@@ -59,6 +59,10 @@
 		78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */; };
 		78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */; };
 		78251EB926AE205500C736A6 /* Curtain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB826AE205500C736A6 /* Curtain.swift */; };
+		78B7651B26AF663F00BC0923 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651A26AF663F00BC0923 /* ImageItem.swift */; };
+		78B7651D26AF788A00BC0923 /* DrawingOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651C26AF788A00BC0923 /* DrawingOutput.swift */; };
+		78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651E26AF78C500BC0923 /* TextOutput.swift */; };
+		78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +137,10 @@
 		78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorModel.swift; sourceTree = "<group>"; };
 		78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorCellModelFactory.swift; sourceTree = "<group>"; };
 		78251EB826AE205500C736A6 /* Curtain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtain.swift; sourceTree = "<group>"; };
+		78B7651A26AF663F00BC0923 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		78B7651C26AF788A00BC0923 /* DrawingOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingOutput.swift; sourceTree = "<group>"; };
+		78B7651E26AF78C500BC0923 /* TextOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutput.swift; sourceTree = "<group>"; };
+		78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +315,7 @@
 			children = (
 				78251E5926AC772F00C736A6 /* Components */,
 				78251E5526AC75DC00C736A6 /* ItemPreviewViewController.swift */,
+				78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */,
 			);
 			path = ItemPreview;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				78251E5F26AC898B00C736A6 /* ItemPreviewTextContentView.swift */,
+				78B7651E26AF78C500BC0923 /* TextOutput.swift */,
 			);
 			path = TextContent;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */,
+				78B7651C26AF788A00BC0923 /* DrawingOutput.swift */,
 			);
 			path = DrawingContent;
 			sourceTree = "<group>";
@@ -419,6 +430,7 @@
 			children = (
 				78251E9126ACD48900C736A6 /* AddItemModel.swift */,
 				78251E9426ACD4F500C736A6 /* SchemaItemModel.swift */,
+				78B7651A26AF663F00BC0923 /* ImageItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -659,7 +671,9 @@
 				78251EB926AE205500C736A6 /* Curtain.swift in Sources */,
 				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
 				78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */,
+				78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */,
 				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
+				78B7651B26AF663F00BC0923 /* ImageItem.swift in Sources */,
 				78251EAC26AE006100C736A6 /* ToolCurtainColorCell.swift in Sources */,
 				78251E7126ACAA4900C736A6 /* SchemasListRouter.swift in Sources */,
 				78251E9A26ACD60800C736A6 /* ListSchemeTableManager.swift in Sources */,
@@ -667,6 +681,7 @@
 				78251E7626ACAE4400C736A6 /* SchemasListCollectionViewManager.swift in Sources */,
 				78251E4C26AC72A600C736A6 /* ListSchemaImageCell.swift in Sources */,
 				78251E9E26AD810300C736A6 /* ListSchemeRouter.swift in Sources */,
+				78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */,
 				78251E4726AC728300C736A6 /* ListSchemaTextCell.swift in Sources */,
 				78251E6026AC898B00C736A6 /* ItemPreviewTextContentView.swift in Sources */,
 				78251E5626AC75DC00C736A6 /* ItemPreviewViewController.swift in Sources */,
@@ -681,6 +696,7 @@
 				78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */,
 				78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */,
 				78251E9C26ACD72200C736A6 /* UITableView+Extension.swift in Sources */,
+				78B7651D26AF788A00BC0923 /* DrawingOutput.swift in Sources */,
 				78251E9726ACD52300C736A6 /* ListSchemaCellModelFactory.swift in Sources */,
 				78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */,
 				78251E9226ACD48900C736A6 /* AddItemModel.swift in Sources */,

@@ -35,17 +35,13 @@ extension Curtain {
             guard let self = self else { return }
             
             switch event.state {
-            case .possible:
-                break
             case .began:
                 self.coordinateBeganToChange()
             case .changed:
                 self.coordinateChanged(event: event)
             case .ended:
                 self.animateToFinalState()
-            case .cancelled:
-                break
-            case .failed:
+            case .possible, .cancelled, .failed:
                 break
             @unknown default:
                 break

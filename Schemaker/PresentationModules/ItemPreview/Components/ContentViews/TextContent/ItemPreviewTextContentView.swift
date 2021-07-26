@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ItemPreviewTextContentView: CommonContentView {
-    
+    let outputSubject = PublishSubject<ICommonOutput>()
 }

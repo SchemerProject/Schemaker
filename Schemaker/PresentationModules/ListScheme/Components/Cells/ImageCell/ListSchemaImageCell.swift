@@ -8,16 +8,26 @@
 import UIKit
 
 final class ListSchemaImageCell: UITableViewCell {
+    
+    private var contentDrawing: CommonContentView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        configureUI()
     }
     
+    func configure(with model: [[CGPoint]], size: CGSize) {
+        contentDrawing = ItemPreviewDrawingContentView(lineLayers: model)
+        
+        contentDrawing?.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        contentDrawing?.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        contentDrawing?.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        contentDrawing?.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+    }
+}
+
+extension ListSchemaImageCell {
+    private func configureUI() {
+        selectionStyle = .none
+    }
 }
