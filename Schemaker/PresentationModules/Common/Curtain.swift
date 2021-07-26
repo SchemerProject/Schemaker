@@ -42,7 +42,7 @@ extension Curtain {
             case .changed:
                 self.coordinateChanged(event: event)
             case .ended:
-                break
+                self.animateToFinalState()
             case .cancelled:
                 break
             case .failed:
@@ -74,6 +74,17 @@ extension Curtain {
         }
         else {
             frame.origin.y = newY
+        }
+    }
+}
+
+extension Curtain {
+    private func animateToFinalState() {
+        guard let superviewHeight = superview?.frame.height else { return }
+        
+        let isOpen = (frame.origin.y - (superviewHeight - self.frame.height)) < frame.height / 2
+        UIView.animate(withDuration: 0.3) {
+            self.frame.origin.y = isOpen ? superviewHeight - self.frame.height : superviewHeight - self.smallestVisiblePart
         }
     }
 }
