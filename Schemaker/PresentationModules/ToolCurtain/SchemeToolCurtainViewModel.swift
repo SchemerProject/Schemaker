@@ -10,14 +10,14 @@ import RxSwift
 import RxCocoa
 
 protocol ISchemeToolCurtainViewModelInput {
-    func loadContent()
+    func update(pickedColor: IToolCurtainColorModel)
 }
 
 protocol ISchemeToolCurtainViewModelOutput {
-    var colorsObservable: Observable<[ToolCurtainColorModel]> { get }
+    var curtainModelObservable: Observable<IToolCurtainModel> { get }
 }
 
-protocol ISchemeToolCurtainViewModel {
+protocol ISchemeToolCurtainViewModel: AnyObject {
     var input: ISchemeToolCurtainViewModelInput { get }
     var output: ISchemeToolCurtainViewModelOutput { get }
 }
@@ -26,20 +26,39 @@ final class SchemeToolCurtainViewModel: ISchemeToolCurtainViewModel {
     var input: ISchemeToolCurtainViewModelInput { return self }
     var output: ISchemeToolCurtainViewModelOutput { return self }
     
-    private let colorFactory: IToolCurtainColorCellModelFactory = ToolCurtainColorCellModelFactory()
+    private weak var moduleOutput: SchemeToolCurtainOutput?
     
-    private var colorsSubject = PublishSubject<[ToolCurtainColorModel]>()
+    private let builder: IToolCurtainCellModelBuilder = ToolCurtainCellModelBuilder()
+    private lazy var curtainModelRelay = BehaviorRelay<IToolCurtainModel>(value: builder.create())
+    private let disposeBag = DisposeBag()
+    
+    init(moduleOutput: SchemeToolCurtainOutput? = nil) {
+        self.moduleOutput = moduleOutput
+        bind()
+    }
 }
 
 extension SchemeToolCurtainViewModel: ISchemeToolCurtainViewModelInput {
-    func loadContent() {
-        let colorModels = colorFactory.create()
-        colorsSubject.onNext(colorModels)
+    func update(pickedColor: IToolCurtainColorModel) {
+        var newCurtainModel = curtainModelRelay.value
+        newCurtainModel.pickedColor = pickedColor
+        newCurtainModel.colors = newCurtainModel.colors.map { ToolCurtainColorModel(color: $0.color, isPicked: $0.color == pickedColor.color, size: $0.size) }
+        curtainModelRelay.accept(newCurtainModel)
     }
 }
 
 extension SchemeToolCurtainViewModel: ISchemeToolCurtainViewModelOutput {
-    var colorsObservable: Observable<[ToolCurtainColorModel]> {
-        colorsSubject
+    var curtainModelObservable: Observable<IToolCurtainModel> {
+        curtainModelRelay.asObservable()
+    }
+}
+
+extension SchemeToolCurtainViewModel {
+    private func bind() {
+        curtainModelRelay.subscribe(onNext: { [weak self] model in
+            guard let self = self else { return }
+            self.moduleOutput?.modelChanged(model: model)
+        })
+            .disposed(by: disposeBag)
     }
 }

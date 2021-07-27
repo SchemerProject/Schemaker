@@ -7,7 +7,14 @@
 
 import UIKit
 
-struct ToolCurtainColorModel {
+protocol IToolCurtainColorModel {
+    var color: UIColor { get }
+    var isPicked: Bool { get }
+    var size: CGSize { get }
+}
+
+struct ToolCurtainColorModel: IToolCurtainColorModel {
     let color: UIColor
+    let isPicked: Bool
     let size: CGSize
 }

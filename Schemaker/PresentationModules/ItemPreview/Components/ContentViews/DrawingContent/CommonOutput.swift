@@ -8,8 +8,3 @@
 import UIKit
 
 protocol ICommonOutput {}
-
-struct DrawingOutput: ICommonOutput {
-    let points: [[CGPoint]]
-    let size: CGSize
-}

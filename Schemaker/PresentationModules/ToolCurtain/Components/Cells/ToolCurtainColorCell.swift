@@ -14,8 +14,10 @@ final class ToolCurtainColorCell: UICollectionViewCell {
         configureUI()
     }
     
-    func configure(with model: ToolCurtainColorModel) {
+    func configure(with model: IToolCurtainColorModel) {
         backgroundColor = model.color
+        layer.borderColor = model.isPicked ? UIColor.blue.cgColor : nil
+        layer.borderWidth = model.isPicked ? 2 : 0
     }
 }
 

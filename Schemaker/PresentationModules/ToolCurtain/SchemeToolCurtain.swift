@@ -13,7 +13,8 @@ final class SchemeToolCurtain: Curtain {
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var collectionView: UICollectionView!
     
-    private lazy var colorsCollectionManager: ISchemeToolColorCollectionManager = SchemeToolColorCollectionManager(collectionView: collectionView)
+    // TODO: - Extend to work not only with colors
+    private lazy var colorsCollectionManager: ISchemeToolColorCollectionManager = SchemeToolColorCollectionManager(collectionView: collectionView, viewModel: viewModel)
     private let viewModel: ISchemeToolCurtainViewModel
     
     private let disposeBag = DisposeBag()
@@ -23,7 +24,6 @@ final class SchemeToolCurtain: Curtain {
         super.init(frame: Constants.baseFrame, smallestVisiblePart: PublicConstants.alwaysVisiblePartHeight)
         commonInit()
         bind()
-        viewModel.input.loadContent()
     }
     
     required init?(coder: NSCoder) {
@@ -51,9 +51,9 @@ extension SchemeToolCurtain {
     }
     
     private func bind() {
-        viewModel.output.colorsObservable.subscribe(onNext: { [weak self] colorModels in
+        viewModel.output.curtainModelObservable.subscribe(onNext: { [weak self] curtainModel in
             guard let self = self else { return }
-            self.colorsCollectionManager.dataSource = colorModels
+            self.colorsCollectionManager.dataSource = curtainModel.colors
         })
             .disposed(by: disposeBag)
     }

@@ -8,20 +8,22 @@
 import UIKit
 
 protocol ISchemeToolColorCollectionManager {
-    var dataSource: [ToolCurtainColorModel] { get set }
+    var dataSource: [IToolCurtainColorModel] { get set }
 }
 
 final class SchemeToolColorCollectionManager: NSObject, ISchemeToolColorCollectionManager {
-    var dataSource: [ToolCurtainColorModel] = [] {
+    var dataSource: [IToolCurtainColorModel] = [] {
         didSet {
             collectionView?.reloadData()
         }
     }
     
     private weak var collectionView: UICollectionView?
+    private weak var viewModel: ISchemeToolCurtainViewModel?
     
-    init(collectionView: UICollectionView) {
+    init(collectionView: UICollectionView, viewModel: ISchemeToolCurtainViewModel) {
         self.collectionView = collectionView
+        self.viewModel = viewModel
         super.init()
         configureCollectionView()
     }
@@ -37,6 +39,11 @@ extension SchemeToolColorCollectionManager: UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeue(cellType: ToolCurtainColorCell.self, indexPath: indexPath)
         cell.configure(with: model)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let pickedColor = dataSource[safe: indexPath.row] else { return }
+        viewModel?.input.update(pickedColor: pickedColor)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

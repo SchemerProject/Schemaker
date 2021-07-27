@@ -13,14 +13,12 @@ final class ItemPreviewDrawingContentView: CommonContentView {
     
     let outputSubject = PublishSubject<ICommonOutput>()
     
-    private var currentOutput: DrawingOutput {
-        return DrawingOutput(points: lineLayers, size: bounds.size)
-    }
+    var contentTools: IToolCurtainModel = Constants.defaultToolsContent
     
-    private var lineLayers: [[CGPoint]]
+    private var drawingModel: IDrawingModel
     
-    init(lineLayers: [[CGPoint]]) {
-        self.lineLayers = lineLayers
+    init(drawingInput: IDrawingModel) {
+        self.drawingModel = drawingInput
         super.init(frame: .zero)
         backgroundColor = .white
     }
@@ -34,12 +32,13 @@ final class ItemPreviewDrawingContentView: CommonContentView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        context.setStrokeColor(UIColor.blue.cgColor)
+        // TODO: - Create adapter to map contentTools to better fitting struct for previewContentView
         context.setLineWidth(8)
         context.setLineCap(.round)
         
-        for lineLayer in lineLayers {
-            for (index, point) in lineLayer.enumerated() {
+        for lineLayer in drawingModel.lineLayers {
+            context.setStrokeColor(lineLayer.color.cgColor)
+            for (index, point) in lineLayer.points.enumerated() {
                 if index == 0 {
                     context.move(to: point)
                 }
@@ -47,25 +46,30 @@ final class ItemPreviewDrawingContentView: CommonContentView {
                     context.addLine(to: point)
                 }
             }
+            context.strokePath()
         }
-        
-        context.strokePath()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        lineLayers.append([CGPoint]())
+        drawingModel.lineLayers.append(DrawingModel.LineLayer(points: [CGPoint](), color: contentTools.pickedColor.color))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         
-        guard let newPoint = touches.first?.location(in: self), var lastLayer = lineLayers.popLast() else { return }
-        lastLayer.append(newPoint)
-        lineLayers.append(lastLayer)
+        guard let newPoint = touches.first?.location(in: self), var lastLayer = drawingModel.lineLayers.popLast() else { return }
+        lastLayer.points.append(newPoint)
+        drawingModel.lineLayers.append(lastLayer)
         
-        outputSubject.onNext(currentOutput)
+        outputSubject.onNext(drawingModel)
         
         setNeedsDisplay()
+    }
+}
+
+extension ItemPreviewDrawingContentView {
+    private struct Constants {
+        static let defaultToolsContent = ToolCurtainModel(colors: [], pickedColor: ToolCurtainColorModel(color: .black, isPicked: true, size: .zero))
     }
 }

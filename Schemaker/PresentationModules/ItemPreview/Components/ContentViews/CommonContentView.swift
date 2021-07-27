@@ -13,4 +13,5 @@ typealias CommonContentView = UIView & ICommonContentView
 
 protocol ICommonContentView {
     var outputSubject: PublishSubject<ICommonOutput> { get }
+    var contentTools: IToolCurtainModel { get set }
 }

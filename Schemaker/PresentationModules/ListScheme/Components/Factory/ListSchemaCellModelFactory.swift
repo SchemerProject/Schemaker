@@ -14,6 +14,7 @@ protocol IListSchemaCellModelFactory {
 
 final class ListSchemaCellModelFactory: IListSchemaCellModelFactory {
     func create() -> [ISchemaItemModel] {
-        return [AddItemModel(height: nil), ImageItem(height: 600)]
+        // ImageItem(height: 600)
+        return [AddItemModel(height: nil)]
     }
 }

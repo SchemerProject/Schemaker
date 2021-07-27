@@ -14,10 +14,10 @@ protocol IItemPreviewViewModelInput {
 }
 
 protocol IItemPreviewViewModelOutput {
-    
+    var updateContentTools: Observable<IToolCurtainModel> { get }
 }
 
-protocol IItemPreviewViewModel {
+protocol IItemPreviewViewModel: SchemeToolCurtainOutput {
     var input: IItemPreviewViewModelInput { get }
     var output: IItemPreviewViewModelOutput { get }
 }
@@ -27,12 +27,20 @@ final class ItemPreviewViewModel: IItemPreviewViewModel {
     var output: IItemPreviewViewModelOutput { return self }
     
     let currentOutput = PublishRelay<ICommonOutput>()
+    
+    private let updateContentToolsSubject = PublishSubject<IToolCurtainModel>()
 }
 
-extension ItemPreviewViewModel: IItemPreviewViewModelInput {
-    
-}
+extension ItemPreviewViewModel: IItemPreviewViewModelInput {}
 
 extension ItemPreviewViewModel: IItemPreviewViewModelOutput {
-    
+    var updateContentTools: Observable<IToolCurtainModel> {
+        updateContentToolsSubject
+    }
+}
+
+extension ItemPreviewViewModel {
+    func modelChanged(model: IToolCurtainModel) {
+        updateContentToolsSubject.onNext(model)
+    }
 }

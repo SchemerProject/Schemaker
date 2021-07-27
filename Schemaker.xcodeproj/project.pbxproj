@@ -57,12 +57,15 @@
 		78251EAD26AE006100C736A6 /* ToolCurtainColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78251EAB26AE006100C736A6 /* ToolCurtainColorCell.xib */; };
 		78251EB026AE027000C736A6 /* SchemeToolColorCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EAF26AE027000C736A6 /* SchemeToolColorCollectionManager.swift */; };
 		78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */; };
-		78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */; };
+		78251EB626AE056600C736A6 /* ToolCurtainCellModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB526AE056600C736A6 /* ToolCurtainCellModelBuilder.swift */; };
 		78251EB926AE205500C736A6 /* Curtain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78251EB826AE205500C736A6 /* Curtain.swift */; };
 		78B7651B26AF663F00BC0923 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651A26AF663F00BC0923 /* ImageItem.swift */; };
-		78B7651D26AF788A00BC0923 /* DrawingOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651C26AF788A00BC0923 /* DrawingOutput.swift */; };
+		78B7651D26AF788A00BC0923 /* CommonOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651C26AF788A00BC0923 /* CommonOutput.swift */; };
 		78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651E26AF78C500BC0923 /* TextOutput.swift */; };
 		78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */; };
+		78B7652326B0BBBF00BC0923 /* ToolCurtainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */; };
+		78B7652526B0C46F00BC0923 /* SchemeToolCurtainOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */; };
+		78B7652726B0C9A100BC0923 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652626B0C9A100BC0923 /* DrawingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,12 +138,15 @@
 		78251EAB26AE006100C736A6 /* ToolCurtainColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolCurtainColorCell.xib; sourceTree = "<group>"; };
 		78251EAF26AE027000C736A6 /* SchemeToolColorCollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolColorCollectionManager.swift; sourceTree = "<group>"; };
 		78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorModel.swift; sourceTree = "<group>"; };
-		78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainColorCellModelFactory.swift; sourceTree = "<group>"; };
+		78251EB526AE056600C736A6 /* ToolCurtainCellModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainCellModelBuilder.swift; sourceTree = "<group>"; };
 		78251EB826AE205500C736A6 /* Curtain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curtain.swift; sourceTree = "<group>"; };
 		78B7651A26AF663F00BC0923 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
-		78B7651C26AF788A00BC0923 /* DrawingOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingOutput.swift; sourceTree = "<group>"; };
+		78B7651C26AF788A00BC0923 /* CommonOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonOutput.swift; sourceTree = "<group>"; };
 		78B7651E26AF78C500BC0923 /* TextOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutput.swift; sourceTree = "<group>"; };
 		78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewViewModel.swift; sourceTree = "<group>"; };
+		78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainModel.swift; sourceTree = "<group>"; };
+		78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolCurtainOutput.swift; sourceTree = "<group>"; };
+		78B7652626B0C9A100BC0923 /* DrawingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,7 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */,
-				78B7651C26AF788A00BC0923 /* DrawingOutput.swift */,
+				78B7651C26AF788A00BC0923 /* CommonOutput.swift */,
+				78B7652626B0C9A100BC0923 /* DrawingModel.swift */,
 			);
 			path = DrawingContent;
 			sourceTree = "<group>";
@@ -457,6 +464,7 @@
 				78251EA426ADFF2D00C736A6 /* Components */,
 				78251EA026ADFB7600C736A6 /* SchemeToolCurtain.swift */,
 				78251EA526ADFF4400C736A6 /* SchemeToolCurtainViewModel.swift */,
+				78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */,
 			);
 			path = ToolCurtain;
 			sourceTree = "<group>";
@@ -494,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */,
+				78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -501,7 +510,7 @@
 		78251EB426AE054000C736A6 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				78251EB526AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift */,
+				78251EB526AE056600C736A6 /* ToolCurtainCellModelBuilder.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -670,7 +679,7 @@
 				78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */,
 				78251EB926AE205500C736A6 /* Curtain.swift in Sources */,
 				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
-				78251EB626AE056600C736A6 /* ToolCurtainColorCellModelFactory.swift in Sources */,
+				78251EB626AE056600C736A6 /* ToolCurtainCellModelBuilder.swift in Sources */,
 				78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */,
 				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
 				78B7651B26AF663F00BC0923 /* ImageItem.swift in Sources */,
@@ -684,8 +693,10 @@
 				78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */,
 				78251E4726AC728300C736A6 /* ListSchemaTextCell.swift in Sources */,
 				78251E6026AC898B00C736A6 /* ItemPreviewTextContentView.swift in Sources */,
+				78B7652726B0C9A100BC0923 /* DrawingModel.swift in Sources */,
 				78251E5626AC75DC00C736A6 /* ItemPreviewViewController.swift in Sources */,
 				78251E5126AC73D900C736A6 /* ListSchemaAddItemCell.swift in Sources */,
+				78B7652526B0C46F00BC0923 /* SchemeToolCurtainOutput.swift in Sources */,
 				78251E5C26AC776000C736A6 /* CommonContentView.swift in Sources */,
 				78251E3D26AC6F4900C736A6 /* ListSchemaViewController.swift in Sources */,
 				78251E6F26ACA9A800C736A6 /* SchemasListViewModel.swift in Sources */,
@@ -696,7 +707,8 @@
 				78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */,
 				78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */,
 				78251E9C26ACD72200C736A6 /* UITableView+Extension.swift in Sources */,
-				78B7651D26AF788A00BC0923 /* DrawingOutput.swift in Sources */,
+				78B7651D26AF788A00BC0923 /* CommonOutput.swift in Sources */,
+				78B7652326B0BBBF00BC0923 /* ToolCurtainModel.swift in Sources */,
 				78251E9726ACD52300C736A6 /* ListSchemaCellModelFactory.swift in Sources */,
 				78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */,
 				78251E9226ACD48900C736A6 /* AddItemModel.swift in Sources */,

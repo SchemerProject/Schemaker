@@ -11,7 +11,7 @@ import RxCocoa
 
 final class ItemPreviewViewController: UIViewController {
     
-    private let contentView: CommonContentView
+    private var contentView: CommonContentView
     private let viewModel: IItemPreviewViewModel
     
     private let disposeBag = DisposeBag()
@@ -28,7 +28,7 @@ final class ItemPreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindToContentOutput()
+        bind()
         configureUI()
     }
     
@@ -62,15 +62,21 @@ extension ItemPreviewViewController {
     }
     
     private func configureToolCurtain() {
-        let viewModel = SchemeToolCurtainViewModel()
+        let viewModel = SchemeToolCurtainViewModel(moduleOutput: viewModel)
         let curtain = SchemeToolCurtain(viewModel: viewModel)
         curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
         view.addSubview(curtain)
     }
     
-    private func bindToContentOutput() {
+    private func bind() {
         contentView.outputSubject
             .bind(to: viewModel.input.currentOutput)
+            .disposed(by: disposeBag)
+    
+        viewModel.output.updateContentTools.subscribe(onNext: { [weak self] contentTools in
+            guard let self = self else { return }
+            self.contentView.contentTools = contentTools
+        })
             .disposed(by: disposeBag)
     }
 }
