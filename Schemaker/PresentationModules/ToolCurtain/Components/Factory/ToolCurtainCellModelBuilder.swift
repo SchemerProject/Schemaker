@@ -15,7 +15,7 @@ final class ToolCurtainCellModelBuilder: IToolCurtainCellModelBuilder {
     func create() -> IToolCurtainModel {
         let colors = createColors()
         let defaultColor = ToolCurtainColorModel(color: .black, isPicked: true, size: Constants.commonSize)
-        return ToolCurtainModel(colors: colors, pickedColor: colors.first ?? defaultColor)
+        return ToolDrawingCurtainModel(colors: colors, pickedColor: colors.first ?? defaultColor)
     }
 }
 

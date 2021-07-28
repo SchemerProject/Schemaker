@@ -53,7 +53,10 @@ extension SchemeToolCurtain {
     private func bind() {
         viewModel.output.curtainModelObservable.subscribe(onNext: { [weak self] curtainModel in
             guard let self = self else { return }
-            self.colorsCollectionManager.dataSource = curtainModel.colors
+            // TODO: Refactor after curtaint extensions
+            if let curtainModel = curtainModel as? ToolDrawingCurtainModel {
+                self.colorsCollectionManager.dataSource = curtainModel.colors
+            }
         })
             .disposed(by: disposeBag)
     }

@@ -63,11 +63,13 @@
 		78B7651D26AF788A00BC0923 /* CommonOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651C26AF788A00BC0923 /* CommonOutput.swift */; };
 		78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651E26AF78C500BC0923 /* TextOutput.swift */; };
 		78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */; };
-		78B7652326B0BBBF00BC0923 /* ToolCurtainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */; };
+		78B7652326B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */; };
 		78B7652526B0C46F00BC0923 /* SchemeToolCurtainOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */; };
 		78B7652726B0C9A100BC0923 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652626B0C9A100BC0923 /* DrawingModel.swift */; };
 		78B7652926B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652826B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift */; };
 		78B7652C26B1FCB400BC0923 /* ContentViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652B26B1FCB400BC0923 /* ContentViewBuilder.swift */; };
+		78B7652E26B2053100BC0923 /* ContentToolsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652D26B2053100BC0923 /* ContentToolsInput.swift */; };
+		78B7653226B206A700BC0923 /* ContentToolsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7653126B206A700BC0923 /* ContentToolsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,11 +148,13 @@
 		78B7651C26AF788A00BC0923 /* CommonOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonOutput.swift; sourceTree = "<group>"; };
 		78B7651E26AF78C500BC0923 /* TextOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutput.swift; sourceTree = "<group>"; };
 		78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewViewModel.swift; sourceTree = "<group>"; };
-		78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCurtainModel.swift; sourceTree = "<group>"; };
+		78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolDrawingCurtainModel.swift; sourceTree = "<group>"; };
 		78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolCurtainOutput.swift; sourceTree = "<group>"; };
 		78B7652626B0C9A100BC0923 /* DrawingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
 		78B7652826B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewModuleOutput.swift; sourceTree = "<group>"; };
 		78B7652B26B1FCB400BC0923 /* ContentViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBuilder.swift; sourceTree = "<group>"; };
+		78B7652D26B2053100BC0923 /* ContentToolsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentToolsInput.swift; sourceTree = "<group>"; };
+		78B7653126B206A700BC0923 /* ContentToolsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentToolsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +348,7 @@
 		78251E5A26AC773800C736A6 /* ContentViews */ = {
 			isa = PBXGroup;
 			children = (
+				78B7653026B2069700BC0923 /* ContentToolsBuilder */,
 				78251E5E26AC789300C736A6 /* DrawingContent */,
 				78251E5D26AC788100C736A6 /* TextContent */,
 				78251E5B26AC776000C736A6 /* CommonContentView.swift */,
@@ -366,6 +371,7 @@
 				78251E6126AC89CD00C736A6 /* ItemPreviewDrawingContentView.swift */,
 				78B7651C26AF788A00BC0923 /* CommonOutput.swift */,
 				78B7652626B0C9A100BC0923 /* DrawingModel.swift */,
+				78B7652D26B2053100BC0923 /* ContentToolsInput.swift */,
 			);
 			path = DrawingContent;
 			sourceTree = "<group>";
@@ -508,7 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */,
-				78B7652226B0BBBF00BC0923 /* ToolCurtainModel.swift */,
+				78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -535,6 +541,14 @@
 				78B7652B26B1FCB400BC0923 /* ContentViewBuilder.swift */,
 			);
 			path = ContentViewBuilder;
+			sourceTree = "<group>";
+		};
+		78B7653026B2069700BC0923 /* ContentToolsBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				78B7653126B206A700BC0923 /* ContentToolsBuilder.swift */,
+			);
+			path = ContentToolsBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +699,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78251E6C26ACA98100C736A6 /* SchemaCell.swift in Sources */,
+				78B7653226B206A700BC0923 /* ContentToolsBuilder.swift in Sources */,
 				78251EB026AE027000C736A6 /* SchemeToolColorCollectionManager.swift in Sources */,
 				78251E1026AC6B5F00C736A6 /* ViewController.swift in Sources */,
 				78251EA626ADFF4400C736A6 /* SchemeToolCurtainViewModel.swift in Sources */,
@@ -720,10 +735,11 @@
 				78B7652C26B1FCB400BC0923 /* ContentViewBuilder.swift in Sources */,
 				78251E7C26ACB01800C736A6 /* UICollectionView+Extension.swift in Sources */,
 				78251E6526AC8A7600C736A6 /* SchemasListViewController.swift in Sources */,
+				78B7652E26B2053100BC0923 /* ContentToolsInput.swift in Sources */,
 				78251EB326AE04F800C736A6 /* ToolCurtainColorModel.swift in Sources */,
 				78251E9C26ACD72200C736A6 /* UITableView+Extension.swift in Sources */,
 				78B7651D26AF788A00BC0923 /* CommonOutput.swift in Sources */,
-				78B7652326B0BBBF00BC0923 /* ToolCurtainModel.swift in Sources */,
+				78B7652326B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift in Sources */,
 				78251E9726ACD52300C736A6 /* ListSchemaCellModelFactory.swift in Sources */,
 				78B7652926B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift in Sources */,
 				78251E8726ACBB5100C736A6 /* SchemaCellModel.swift in Sources */,

@@ -13,8 +13,7 @@ final class ItemPreviewDrawingContentView: CommonContentView {
     
     let outputSubject = PublishSubject<ICommonOutput>()
     
-    var contentTools: IToolCurtainModel = Constants.defaultToolsContent
-    
+    private var contentTools: ContentToolsDrawingInput = Constants.defaultToolsContent
     private var drawingModel: IDrawingModel
     
     init(drawingInput: IDrawingModel) {
@@ -32,7 +31,6 @@ final class ItemPreviewDrawingContentView: CommonContentView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        // TODO: - Create adapter to map contentTools to better fitting struct for previewContentView
         context.setLineWidth(8)
         context.setLineCap(.round)
         
@@ -52,7 +50,7 @@ final class ItemPreviewDrawingContentView: CommonContentView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        drawingModel.lineLayers.append(DrawingModel.LineLayer(points: [CGPoint](), color: contentTools.pickedColor.color))
+        drawingModel.lineLayers.append(DrawingModel.LineLayer(points: [CGPoint](), color: contentTools.color))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,10 +64,15 @@ final class ItemPreviewDrawingContentView: CommonContentView {
         
         setNeedsDisplay()
     }
+    
+    func update(contentTools: IContentToolsInput) {
+        guard let contentTools = contentTools as? ContentToolsDrawingInput else { return }
+        self.contentTools = contentTools
+    }
 }
 
 extension ItemPreviewDrawingContentView {
     private struct Constants {
-        static let defaultToolsContent = ToolCurtainModel(colors: [], pickedColor: ToolCurtainColorModel(color: .black, isPicked: true, size: .zero))
+        static let defaultToolsContent = ContentToolsDrawingInput(color: .black)
     }
 }

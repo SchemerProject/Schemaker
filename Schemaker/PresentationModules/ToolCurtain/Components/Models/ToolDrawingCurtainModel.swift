@@ -7,12 +7,9 @@
 
 import Foundation
 
-protocol IToolCurtainModel {
-    var colors: [IToolCurtainColorModel] { get set }
-    var pickedColor: IToolCurtainColorModel { get set }
-}
+protocol IToolCurtainModel {}
 
-struct ToolCurtainModel: IToolCurtainModel {
+struct ToolDrawingCurtainModel: IToolCurtainModel {
     var colors: [IToolCurtainColorModel]
     var pickedColor: IToolCurtainColorModel
 }

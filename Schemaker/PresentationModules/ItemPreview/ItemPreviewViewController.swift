@@ -14,6 +14,8 @@ final class ItemPreviewViewController: UIViewController {
     
     private var contentView: CommonContentView
     private let viewModel: IItemPreviewViewModel
+    
+    private let contentToolsBuilder: IContentToolsBuilder = ContentToolsBuilder()
     private let contentViewBuilder: IContentViewBuilder = ContentViewBuilder()
     
     private let disposeBag = DisposeBag()
@@ -92,7 +94,8 @@ extension ItemPreviewViewController {
     
         viewModel.output.updateContentTools.subscribe(onNext: { [weak self] contentTools in
             guard let self = self else { return }
-            self.contentView.contentTools = contentTools
+            let tools = self.contentToolsBuilder.create(model: contentTools)
+            self.contentView.update(contentTools: tools)
         })
             .disposed(by: disposeBag)
     }

@@ -40,7 +40,7 @@ final class SchemeToolCurtainViewModel: ISchemeToolCurtainViewModel {
 
 extension SchemeToolCurtainViewModel: ISchemeToolCurtainViewModelInput {
     func update(pickedColor: IToolCurtainColorModel) {
-        var newCurtainModel = curtainModelRelay.value
+        guard var newCurtainModel = curtainModelRelay.value as? ToolDrawingCurtainModel else { return }
         newCurtainModel.pickedColor = pickedColor
         newCurtainModel.colors = newCurtainModel.colors.map { ToolCurtainColorModel(color: $0.color, isPicked: $0.color == pickedColor.color, size: $0.size) }
         curtainModelRelay.accept(newCurtainModel)
