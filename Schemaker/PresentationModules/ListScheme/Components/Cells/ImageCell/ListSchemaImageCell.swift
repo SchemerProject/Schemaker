@@ -17,12 +17,16 @@ final class ListSchemaImageCell: UITableViewCell {
     }
     
     func configure(with model: ImageItem) {
-        contentDrawing = ItemPreviewDrawingContentView(drawingInput: model.data)
+        let contentDrawing = ItemPreviewDrawingContentView(drawingInput: model.data)
+        contentDrawing.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(contentDrawing)
         
-        contentDrawing?.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        contentDrawing?.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        contentDrawing?.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        contentDrawing?.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        contentDrawing.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        contentDrawing.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        contentDrawing.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        contentDrawing.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        
+        self.contentDrawing = contentDrawing
     }
 }
 

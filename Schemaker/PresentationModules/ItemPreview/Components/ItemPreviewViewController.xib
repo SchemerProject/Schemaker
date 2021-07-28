@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemPreviewViewController" customModule="Schemaker" customModuleProvider="target">
             <connections>
+                <outlet property="saveButton" destination="ccf-pE-Qud" id="O7d-c4-gUh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZoV-DX-QfS"/>
             </connections>
         </placeholder>
@@ -16,8 +17,23 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-pE-Qud">
+                    <rect key="frame" x="157" y="44" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="PiX-ub-Rek"/>
+                        <constraint firstAttribute="height" constant="50" id="ic2-Js-iap"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Save!"/>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ccf-pE-Qud" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nqB-Qj-Xsh"/>
+                <constraint firstItem="ccf-pE-Qud" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xSu-UN-3rU"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="99"/>
         </view>
     </objects>

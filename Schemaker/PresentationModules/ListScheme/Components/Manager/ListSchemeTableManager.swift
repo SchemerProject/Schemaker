@@ -53,6 +53,7 @@ extension ListSchemeTableManager: UITableViewDelegate, UITableViewDataSource {
         else if let model = model as? ImageItem {
             let cell = tableView.dequeue(cellType: ListSchemaImageCell.self, indexPath: indexPath)
             cell.configure(with: model)
+            return cell
         }
         
         fatalError("No cell for model \(String(describing: type(of: model)))")
@@ -72,6 +73,7 @@ extension ListSchemeTableManager {
         tableView?.delegate = self
         tableView?.dataSource = self
         
+        tableView?.register(cellType: ListSchemaImageCell.self)
         tableView?.register(cellType: ListSchemaAddItemCell.self)
     }
 }

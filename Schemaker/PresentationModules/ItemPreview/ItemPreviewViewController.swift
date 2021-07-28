@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 final class ItemPreviewViewController: UIViewController {
+    @IBOutlet private var saveButton: UIButton!
     
     private var contentView: CommonContentView
     private let viewModel: IItemPreviewViewModel
@@ -31,6 +32,7 @@ final class ItemPreviewViewController: UIViewController {
         super.viewDidLoad()
         bind()
         configureUI()
+        configureSaveButton()
     }
     
     override func viewDidLayoutSubviews() {
@@ -72,6 +74,15 @@ extension ItemPreviewViewController {
         let curtain = SchemeToolCurtain(viewModel: viewModel)
         curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
         view.addSubview(curtain)
+    }
+    
+    private func configureSaveButton() {
+        saveButton.rx.tap.subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.dismiss(animated: true, completion: nil)
+        })
+            .disposed(by: disposeBag)
+        view.bringSubviewToFront(saveButton)
     }
     
     private func bind() {
