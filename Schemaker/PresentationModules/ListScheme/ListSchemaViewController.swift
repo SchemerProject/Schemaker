@@ -13,7 +13,7 @@ final class ListSchemaViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     
     private lazy var tableManager: IListSchemeTableManager = ListSchemeTableManager(tableView: tableView, viewModel: viewModel)
-    private lazy var router: IListSchemeRouter = ListSchemeRouter(controller: self)
+    private lazy var router: IListSchemeRouter = ListSchemeRouter(controller: self, previewOutput: viewModel)
     
     private let viewModel: IListSchemaViewModel
     

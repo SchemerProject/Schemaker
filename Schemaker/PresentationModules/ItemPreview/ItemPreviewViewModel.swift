@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol IItemPreviewViewModelInput {
-    var currentOutput: PublishRelay<ICommonOutput> { get }
+    var currentOutput: BehaviorRelay<ICommonOutput> { get }
+    func sendCurrentOutput()
 }
 
 protocol IItemPreviewViewModelOutput {
@@ -26,12 +27,22 @@ final class ItemPreviewViewModel: IItemPreviewViewModel {
     var input: IItemPreviewViewModelInput { return self }
     var output: IItemPreviewViewModelOutput { return self }
     
-    let currentOutput = PublishRelay<ICommonOutput>()
+    let currentOutput: BehaviorRelay<ICommonOutput>
     
     private let updateContentToolsSubject = PublishSubject<IToolCurtainModel>()
+    private weak var moduleOutput: IItemPreviewModuleOutput?
+    
+    init(model: ICommonOutput, moduleOutput: IItemPreviewModuleOutput? = nil) {
+        self.moduleOutput = moduleOutput
+        currentOutput = BehaviorRelay<ICommonOutput>(value: model)
+    }
 }
 
-extension ItemPreviewViewModel: IItemPreviewViewModelInput {}
+extension ItemPreviewViewModel: IItemPreviewViewModelInput {
+    func sendCurrentOutput() {
+        moduleOutput?.didReceive(output: currentOutput.value)
+    }
+}
 
 extension ItemPreviewViewModel: IItemPreviewViewModelOutput {
     var updateContentTools: Observable<IToolCurtainModel> {

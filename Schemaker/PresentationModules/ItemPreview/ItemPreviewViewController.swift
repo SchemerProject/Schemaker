@@ -13,11 +13,12 @@ final class ItemPreviewViewController: UIViewController {
     
     private var contentView: CommonContentView
     private let viewModel: IItemPreviewViewModel
+    private let contentViewBuilder: IContentViewBuilder = ContentViewBuilder()
     
     private let disposeBag = DisposeBag()
     
-    init(contentView: CommonContentView, viewModel: IItemPreviewViewModel) {
-        self.contentView = contentView
+    init(viewModel: IItemPreviewViewModel) {
+        self.contentView = contentViewBuilder.build(output: viewModel.input.currentOutput.value)
         self.viewModel = viewModel
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
@@ -35,6 +36,11 @@ final class ItemPreviewViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         contentView.layer.addShadow(radius: 16, rect: contentView.bounds)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.input.sendCurrentOutput()
     }
 }
 

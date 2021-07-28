@@ -16,8 +16,8 @@ final class ListSchemaImageCell: UITableViewCell {
         configureUI()
     }
     
-    func configure(with model: [[CGPoint]], size: CGSize) {
-     //   contentDrawing = ItemPreviewDrawingContentView(lineLayers: model)
+    func configure(with model: ImageItem) {
+        contentDrawing = ItemPreviewDrawingContentView(drawingInput: model.data)
         
         contentDrawing?.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentDrawing?.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true

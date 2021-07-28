@@ -14,17 +14,18 @@ protocol IListSchemeRouter {
 final class ListSchemeRouter {
     
     private weak var controller: UIViewController?
+    private weak var previewOutput: IItemPreviewModuleOutput?
     
-    init(controller: UIViewController) {
+    init(controller: UIViewController, previewOutput: IItemPreviewModuleOutput) {
         self.controller = controller
+        self.previewOutput = previewOutput
     }
 }
 
 extension ListSchemeRouter: IListSchemeRouter {
     func openNewItemPreview(type: ItemFactory) {
-        let contentView = ItemPreviewDrawingContentView(drawingInput: DrawingModel(lineLayers: []))
-        let viewModel = ItemPreviewViewModel()
-        let viewController = ItemPreviewViewController(contentView: contentView, viewModel: viewModel)
+        let viewModel = ItemPreviewViewModel(model: DrawingModel(lineLayers: []), moduleOutput: previewOutput)
+        let viewController = ItemPreviewViewController(viewModel: viewModel)
         viewController.modalPresentationStyle = .overCurrentContext
         controller?.present(viewController, animated: true, completion: nil)
     }

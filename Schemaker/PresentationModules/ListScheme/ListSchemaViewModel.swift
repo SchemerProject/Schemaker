@@ -24,7 +24,7 @@ protocol IListSchemaViewModelOutput {
     var openItemFactoryObservable: Observable<ItemFactory> { get }
 }
 
-protocol IListSchemaViewModel: AnyObject {
+protocol IListSchemaViewModel: IItemPreviewModuleOutput {
     var input: IListSchemaViewModelInput { get }
     var output: IListSchemaViewModelOutput { get }
 }
@@ -57,5 +57,17 @@ extension ListSchemaViewModel: IListSchemaViewModelOutput {
     
     var openItemFactoryObservable: Observable<ItemFactory> {
         openItemFactorySubject
+    }
+}
+
+extension ListSchemaViewModel {
+    func didReceive(output: ICommonOutput) {
+        var items = factory.create()
+        
+        // TODO: - to adapter/factory
+        if let model = output as? IDrawingModel {
+            items.append(ImageItem(height: 600, data: model))
+        }
+        itemsSubject.onNext(items)
     }
 }

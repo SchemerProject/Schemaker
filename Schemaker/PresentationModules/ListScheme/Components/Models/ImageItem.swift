@@ -9,4 +9,5 @@ import UIKit
 
 struct ImageItem: ISchemaItemModel {
     let height: CGFloat?
+    let data: IDrawingModel
 }
