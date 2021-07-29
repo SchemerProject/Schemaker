@@ -14,7 +14,7 @@ protocol IContentToolsBuilder {
 final class ContentToolsBuilder: IContentToolsBuilder {
     func create(model: IToolCurtainModel) -> IContentToolsInput {
         if let model = model as? ToolDrawingCurtainModel {
-            return ContentToolsDrawingInput(color: model.pickedColor.color)
+            return ContentToolsDrawingInput(color: model.lineColor)
         }
         
         fatalError("Wrong model type \(String(describing: type(of: model)))")

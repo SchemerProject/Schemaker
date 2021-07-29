@@ -7,14 +7,15 @@
 
 import UIKit
 
-final class ToolCurtainColorCell: UICollectionViewCell {
+final class ToolCurtainColorCell: ToolUnitConfigurableCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
         configureUI()
     }
     
-    func configure(with model: IToolCurtainColorModel) {
+    func configure(with model: IToolUnit) {
+        guard let model = model as? IToolCurtainColorModel else { return }
         backgroundColor = model.color
         layer.borderColor = model.isPicked ? UIColor.blue.cgColor : nil
         layer.borderWidth = model.isPicked ? 2 : 0

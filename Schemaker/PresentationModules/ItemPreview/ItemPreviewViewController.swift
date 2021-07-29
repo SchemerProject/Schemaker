@@ -72,7 +72,8 @@ extension ItemPreviewViewController {
     }
     
     private func configureToolCurtain() {
-        let viewModel = SchemeToolCurtainViewModel(moduleOutput: viewModel)
+        let curtainType: ItemFactory = contentView is ItemPreviewDrawingContentView ? .drawing : .text
+        let viewModel = SchemeToolCurtainViewModel(input: SchemeToolCurtainInput(curtainType: curtainType), moduleOutput: viewModel)
         let curtain = SchemeToolCurtain(viewModel: viewModel)
         curtain.frame.origin.y = view.frame.height - curtain.frame.height + SchemeToolCurtain.PublicConstants.alwaysVisiblePartHeight
         view.addSubview(curtain)

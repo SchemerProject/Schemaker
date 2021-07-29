@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 
 protocol ISchemeToolCurtainViewModelInput {
-    func update(pickedColor: IToolCurtainColorModel)
+    func update(pickedToolIndex: Int, pickedUnitIndex: Int)
 }
 
 protocol ISchemeToolCurtainViewModelOutput {
-    var curtainModelObservable: Observable<IToolCurtainModel> { get }
+    var curtainModelObservable: Observable<[ITool]> { get }
 }
 
 protocol ISchemeToolCurtainViewModel: AnyObject {
@@ -28,27 +28,29 @@ final class SchemeToolCurtainViewModel: ISchemeToolCurtainViewModel {
     
     private weak var moduleOutput: SchemeToolCurtainOutput?
     
-    private let builder: IToolCurtainCellModelBuilder = ToolCurtainCellModelBuilder()
-    private lazy var curtainModelRelay = BehaviorRelay<IToolCurtainModel>(value: builder.create())
+    private var currentTools: [ITool]
+    private let builder: IToolCurtainCellModelBuilder
+    private lazy var curtainModelRelay = BehaviorRelay<[ITool]>(value: currentTools)
     private let disposeBag = DisposeBag()
     
-    init(moduleOutput: SchemeToolCurtainOutput? = nil) {
+    init(input: ISchemeToolCurtainInput, moduleOutput: SchemeToolCurtainOutput? = nil) {
         self.moduleOutput = moduleOutput
+        builder = ToolCurtainCellModelBuilder(curtainType: input.curtainType)
+        currentTools = builder.create()
         bind()
     }
 }
 
 extension SchemeToolCurtainViewModel: ISchemeToolCurtainViewModelInput {
-    func update(pickedColor: IToolCurtainColorModel) {
-        guard var newCurtainModel = curtainModelRelay.value as? ToolDrawingCurtainModel else { return }
-        newCurtainModel.pickedColor = pickedColor
-        newCurtainModel.colors = newCurtainModel.colors.map { ToolCurtainColorModel(color: $0.color, isPicked: $0.color == pickedColor.color, size: $0.size) }
-        curtainModelRelay.accept(newCurtainModel)
+    func update(pickedToolIndex: Int, pickedUnitIndex: Int) {
+        let updatedTools = builder.recreate(with: currentTools, pickedToolIndex: pickedToolIndex, pickedUnitIndex: pickedUnitIndex)
+        currentTools = updatedTools
+        curtainModelRelay.accept(currentTools)
     }
 }
 
 extension SchemeToolCurtainViewModel: ISchemeToolCurtainViewModelOutput {
-    var curtainModelObservable: Observable<IToolCurtainModel> {
+    var curtainModelObservable: Observable<[ITool]> {
         curtainModelRelay.asObservable()
     }
 }
@@ -57,7 +59,8 @@ extension SchemeToolCurtainViewModel {
     private func bind() {
         curtainModelRelay.subscribe(onNext: { [weak self] model in
             guard let self = self else { return }
-            self.moduleOutput?.modelChanged(model: model)
+            let output = self.builder.buildOutputModel(tools: self.currentTools)
+            self.moduleOutput?.modelChanged(model: output)
         })
             .disposed(by: disposeBag)
     }

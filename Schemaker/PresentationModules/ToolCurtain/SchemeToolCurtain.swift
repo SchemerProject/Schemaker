@@ -11,10 +11,9 @@ import RxCocoa
 
 final class SchemeToolCurtain: Curtain {
     @IBOutlet private var contentView: UIView!
-    @IBOutlet private var collectionView: UICollectionView!
-    
-    // TODO: - Extend to work not only with colors
-    private lazy var colorsCollectionManager: ISchemeToolColorCollectionManager = SchemeToolColorCollectionManager(collectionView: collectionView, viewModel: viewModel)
+    @IBOutlet private var tableView: UITableView!
+   
+    private lazy var tableManager: ISchemeToolsTableManager = SchemeToolsTableManager(tableView: tableView, viewModel: viewModel)
     private let viewModel: ISchemeToolCurtainViewModel
     
     private let disposeBag = DisposeBag()
@@ -51,12 +50,9 @@ extension SchemeToolCurtain {
     }
     
     private func bind() {
-        viewModel.output.curtainModelObservable.subscribe(onNext: { [weak self] curtainModel in
+        viewModel.output.curtainModelObservable.subscribe(onNext: { [weak self] toolList in
             guard let self = self else { return }
-            // TODO: Refactor after curtaint extensions
-            if let curtainModel = curtainModel as? ToolDrawingCurtainModel {
-                self.colorsCollectionManager.dataSource = curtainModel.colors
-            }
+            self.tableManager.dataSource = toolList
         })
             .disposed(by: disposeBag)
     }
