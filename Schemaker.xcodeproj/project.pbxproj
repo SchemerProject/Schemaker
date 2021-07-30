@@ -64,7 +64,7 @@
 		78B7651F26AF78C500BC0923 /* TextOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7651E26AF78C500BC0923 /* TextOutput.swift */; };
 		78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */; };
 		78B7652326B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */; };
-		78B7652526B0C46F00BC0923 /* SchemeToolCurtainOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */; };
+		78B7652526B0C46F00BC0923 /* SchemeToolCurtainIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652426B0C46F00BC0923 /* SchemeToolCurtainIO.swift */; };
 		78B7652726B0C9A100BC0923 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652626B0C9A100BC0923 /* DrawingModel.swift */; };
 		78B7652926B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652826B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift */; };
 		78B7652C26B1FCB400BC0923 /* ContentViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7652B26B1FCB400BC0923 /* ContentViewBuilder.swift */; };
@@ -159,7 +159,7 @@
 		78B7651E26AF78C500BC0923 /* TextOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutput.swift; sourceTree = "<group>"; };
 		78B7652026AF78FD00BC0923 /* ItemPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewViewModel.swift; sourceTree = "<group>"; };
 		78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolDrawingCurtainModel.swift; sourceTree = "<group>"; };
-		78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolCurtainOutput.swift; sourceTree = "<group>"; };
+		78B7652426B0C46F00BC0923 /* SchemeToolCurtainIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeToolCurtainIO.swift; sourceTree = "<group>"; };
 		78B7652626B0C9A100BC0923 /* DrawingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
 		78B7652826B1F9CC00BC0923 /* ItemPreviewModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewModuleOutput.swift; sourceTree = "<group>"; };
 		78B7652B26B1FCB400BC0923 /* ContentViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBuilder.swift; sourceTree = "<group>"; };
@@ -496,7 +496,7 @@
 				78251EA426ADFF2D00C736A6 /* Components */,
 				78251EA026ADFB7600C736A6 /* SchemeToolCurtain.swift */,
 				78251EA526ADFF4400C736A6 /* SchemeToolCurtainViewModel.swift */,
-				78B7652426B0C46F00BC0923 /* SchemeToolCurtainOutput.swift */,
+				78B7652426B0C46F00BC0923 /* SchemeToolCurtainIO.swift */,
 			);
 			path = ToolCurtain;
 			sourceTree = "<group>";
@@ -599,8 +599,8 @@
 			isa = PBXGroup;
 			children = (
 				78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */,
-				78B7654926B3712D00BC0923 /* CommonListTool.swift */,
 				78B7654B26B3714300BC0923 /* ToolTextCurtainModel.swift */,
+				78B7654926B3712D00BC0923 /* CommonListTool.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -794,7 +794,7 @@
 				78B7654226B343E500BC0923 /* ITool.swift in Sources */,
 				78B7653B26B3396900BC0923 /* ToolListCell.swift in Sources */,
 				78251E5126AC73D900C736A6 /* ListSchemaAddItemCell.swift in Sources */,
-				78B7652526B0C46F00BC0923 /* SchemeToolCurtainOutput.swift in Sources */,
+				78B7652526B0C46F00BC0923 /* SchemeToolCurtainIO.swift in Sources */,
 				78251E5C26AC776000C736A6 /* CommonContentView.swift in Sources */,
 				78251E3D26AC6F4900C736A6 /* ListSchemaViewController.swift in Sources */,
 				78251E6F26ACA9A800C736A6 /* SchemasListViewModel.swift in Sources */,

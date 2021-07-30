@@ -11,6 +11,10 @@ import RxCocoa
 
 final class ItemPreviewDrawingContentView: CommonContentView {
     
+    override var intrinsicContentSize: CGSize {
+        return drawingModel.size
+    }
+    
     let outputSubject = PublishSubject<ICommonOutput>()
     
     private var contentTools: ContentToolsDrawingInput = Constants.defaultToolsContent
@@ -24,6 +28,11 @@ final class ItemPreviewDrawingContentView: CommonContentView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        drawingModel.size = bounds.size
     }
     
     override func draw(_ rect: CGRect) {

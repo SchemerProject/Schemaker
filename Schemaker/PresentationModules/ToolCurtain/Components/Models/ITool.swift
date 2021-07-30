@@ -14,6 +14,4 @@ protocol IListTool: ITool {
     var pickedIndex: Int { get set }
 }
 
-protocol IPropertyTool: ITool {
-    
-}
+protocol IPropertyTool: ITool {}

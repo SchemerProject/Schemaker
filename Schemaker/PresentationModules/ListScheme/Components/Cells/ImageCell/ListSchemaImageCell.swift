@@ -23,8 +23,7 @@ final class ListSchemaImageCell: UITableViewCell {
         
         contentDrawing.topAnchor.constraint(equalTo: topAnchor).isActive = true
         contentDrawing.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        contentDrawing.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        contentDrawing.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        contentDrawing.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         self.contentDrawing = contentDrawing
     }

@@ -66,8 +66,14 @@ extension ListSchemaViewModel {
         
         // TODO: - to adapter/factory
         if let model = output as? IDrawingModel {
-            items.append(ImageItem(height: 600, data: model))
+            items.append(ImageItem(height: nil, data: model))
         }
         itemsSubject.onNext(items)
+    }
+}
+
+extension ListSchemaViewModel {
+    private func saveSchema() {
+        
     }
 }
