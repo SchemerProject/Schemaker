@@ -7,6 +7,4 @@
 
 import UIKit
 
-struct AddItemModel: ISchemaItemModel {
-    let height: CGFloat?
-}
+struct AddItemModel: ISchemaItemModel {}

@@ -13,14 +13,16 @@ protocol IToolCurtainCellModelBuilder {
     func buildOutputModel(tools: [ITool]) -> IToolCurtainModel
 }
 
-final class ToolCurtainCellModelBuilder: IToolCurtainCellModelBuilder {
+final class ToolCurtainCellModelBuilder {
     
     private let curtainType: ItemFactory
     
     init(curtainType: ItemFactory) {
         self.curtainType = curtainType
     }
-    
+}
+
+extension ToolCurtainCellModelBuilder: IToolCurtainCellModelBuilder {
     func create() -> [ITool] {
         switch curtainType {
         case .text:

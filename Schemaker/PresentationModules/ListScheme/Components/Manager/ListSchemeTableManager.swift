@@ -59,10 +59,6 @@ extension ListSchemeTableManager: UITableViewDelegate, UITableViewDataSource {
         fatalError("No cell for model \(String(describing: type(of: model)))")
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return dataSource[safe: indexPath.row]?.height ?? UITableView.automaticDimension
-    }
-    
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }

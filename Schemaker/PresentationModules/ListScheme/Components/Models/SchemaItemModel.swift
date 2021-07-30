@@ -7,6 +7,4 @@
 
 import UIKit
 
-protocol ISchemaItemModel {
-    var height: CGFloat? { get }
-}
+protocol ISchemaItemModel {}

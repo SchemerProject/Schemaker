@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol IToolUnit {
-    var size: CGSize { get }
-}
-
 protocol IToolCurtainColorModel: IToolUnit {
     var color: UIColor { get }
     var isPicked: Bool { get set }

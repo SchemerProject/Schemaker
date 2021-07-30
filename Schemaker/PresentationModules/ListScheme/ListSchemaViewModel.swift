@@ -34,6 +34,7 @@ final class ListSchemaViewModel: IListSchemaViewModel {
     var output: IListSchemaViewModelOutput { return self }
     
     private let factory: IListSchemaCellModelFactory = ListSchemaCellModelFactory()
+    private var currentItems: [ISchemaItemModel] = []
     
     private let itemsSubject = PublishSubject<[ISchemaItemModel]>()
     private let openItemFactorySubject = PublishSubject<ItemFactory>()
@@ -42,6 +43,7 @@ final class ListSchemaViewModel: IListSchemaViewModel {
 extension ListSchemaViewModel: IListSchemaViewModelInput {
     func loadItems() {
         let items = factory.create()
+        currentItems = items
         itemsSubject.onNext(items)
     }
     
@@ -62,13 +64,11 @@ extension ListSchemaViewModel: IListSchemaViewModelOutput {
 
 extension ListSchemaViewModel {
     func didReceive(output: ICommonOutput) {
-        var items = factory.create()
-        
         // TODO: - to adapter/factory
         if let model = output as? IDrawingModel {
-            items.append(ImageItem(height: nil, data: model))
+            currentItems.append(ImageItem(data: model))
         }
-        itemsSubject.onNext(items)
+        itemsSubject.onNext(currentItems )
     }
 }
 

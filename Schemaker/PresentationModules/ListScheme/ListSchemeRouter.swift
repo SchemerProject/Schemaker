@@ -12,7 +12,6 @@ protocol IListSchemeRouter {
 }
 
 final class ListSchemeRouter {
-    
     private weak var controller: UIViewController?
     private weak var previewOutput: IItemPreviewModuleOutput?
     

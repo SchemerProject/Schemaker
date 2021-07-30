@@ -80,6 +80,10 @@
 		78B7654826B3687A00BC0923 /* AutosizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7654726B3687A00BC0923 /* AutosizedTableView.swift */; };
 		78B7654A26B3712D00BC0923 /* CommonListTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7654926B3712D00BC0923 /* CommonListTool.swift */; };
 		78B7654C26B3714300BC0923 /* ToolTextCurtainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7654B26B3714300BC0923 /* ToolTextCurtainModel.swift */; };
+		78C305F726B453FE002A9529 /* ToolUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C305F626B453FE002A9529 /* ToolUnit.swift */; };
+		78C305FC26B4C17A002A9529 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 78C305FB26B4C17A002A9529 /* RealmSwift */; };
+		78C305FE26B4C577002A9529 /* DataBaseSchemesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C305FD26B4C577002A9529 /* DataBaseSchemesManager.swift */; };
+		78C3060126B4C8E8002A9529 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C3060026B4C8E8002A9529 /* Scheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +179,9 @@
 		78B7654726B3687A00BC0923 /* AutosizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizedTableView.swift; sourceTree = "<group>"; };
 		78B7654926B3712D00BC0923 /* CommonListTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonListTool.swift; sourceTree = "<group>"; };
 		78B7654B26B3714300BC0923 /* ToolTextCurtainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTextCurtainModel.swift; sourceTree = "<group>"; };
+		78C305F626B453FE002A9529 /* ToolUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolUnit.swift; sourceTree = "<group>"; };
+		78C305FD26B4C577002A9529 /* DataBaseSchemesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseSchemesManager.swift; sourceTree = "<group>"; };
+		78C3060026B4C8E8002A9529 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C305FC26B4C17A002A9529 /* RealmSwift in Frameworks */,
 				78251E8426ACBB2000C736A6 /* RxSwift in Frameworks */,
 				78251E8226ACBB2000C736A6 /* RxCocoa in Frameworks */,
 			);
@@ -228,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				78251E3B26AC6EF900C736A6 /* SupportFiles */,
+				78C305FF26B4C8DB002A9529 /* Models */,
 				78251E3A26AC6EDF00C736A6 /* Services */,
 				78251E3926AC6ECD00C736A6 /* PresentationModules */,
 				78251E0F26AC6B5F00C736A6 /* ViewController.swift */,
@@ -268,6 +277,7 @@
 		78251E3A26AC6EDF00C736A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				78C305FD26B4C577002A9529 /* DataBaseSchemesManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -598,9 +608,8 @@
 		78B7654326B343F800BC0923 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */,
-				78B7654B26B3714300BC0923 /* ToolTextCurtainModel.swift */,
-				78B7654926B3712D00BC0923 /* CommonListTool.swift */,
+				78C305F926B4542E002A9529 /* Tools */,
+				78C305F826B45419002A9529 /* CurtainModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -609,8 +618,34 @@
 			isa = PBXGroup;
 			children = (
 				78251EB226AE04F800C736A6 /* ToolCurtainColorModel.swift */,
+				78C305F626B453FE002A9529 /* ToolUnit.swift */,
 			);
 			path = ModelUnits;
+			sourceTree = "<group>";
+		};
+		78C305F826B45419002A9529 /* CurtainModels */ = {
+			isa = PBXGroup;
+			children = (
+				78B7652226B0BBBF00BC0923 /* ToolDrawingCurtainModel.swift */,
+				78B7654B26B3714300BC0923 /* ToolTextCurtainModel.swift */,
+			);
+			path = CurtainModels;
+			sourceTree = "<group>";
+		};
+		78C305F926B4542E002A9529 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				78B7654926B3712D00BC0923 /* CommonListTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		78C305FF26B4C8DB002A9529 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78C3060026B4C8E8002A9529 /* Scheme.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -632,6 +667,7 @@
 			packageProductDependencies = (
 				78251E8126ACBB2000C736A6 /* RxCocoa */,
 				78251E8326ACBB2000C736A6 /* RxSwift */,
+				78C305FB26B4C17A002A9529 /* RealmSwift */,
 			);
 			productName = Schemaker;
 			productReference = 78251E0826AC6B5F00C736A6 /* Schemaker.app */;
@@ -707,6 +743,7 @@
 			mainGroup = 78251DFF26AC6B5F00C736A6;
 			packageReferences = (
 				78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				78C305FA26B4C17A002A9529 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 78251E0926AC6B5F00C736A6 /* Products */;
 			projectDirPath = "";
@@ -772,7 +809,9 @@
 				78251E8C26ACC2E400C736A6 /* Array+Extension.swift in Sources */,
 				78251EB926AE205500C736A6 /* Curtain.swift in Sources */,
 				78251E8E26ACCA2400C736A6 /* CALayer+Extension.swift in Sources */,
+				78C305F726B453FE002A9529 /* ToolUnit.swift in Sources */,
 				78251EB626AE056600C736A6 /* ToolCurtainCellModelBuilder.swift in Sources */,
+				78C305FE26B4C577002A9529 /* DataBaseSchemesManager.swift in Sources */,
 				78B7652126AF78FD00BC0923 /* ItemPreviewViewModel.swift in Sources */,
 				78251E8A26ACBC7B00C736A6 /* SchemasListCellModelFactory.swift in Sources */,
 				78B7651B26AF663F00BC0923 /* ImageItem.swift in Sources */,
@@ -782,6 +821,7 @@
 				78251E7426ACAD7000C736A6 /* UIColor+Extension.swift in Sources */,
 				78251E7626ACAE4400C736A6 /* SchemasListCollectionViewManager.swift in Sources */,
 				78B7654026B343CF00BC0923 /* CommonCurtainModel.swift in Sources */,
+				78C3060126B4C8E8002A9529 /* Scheme.swift in Sources */,
 				78B7653E26B33C4600BC0923 /* ToolUnitConfigurable.swift in Sources */,
 				78251E4C26AC72A600C736A6 /* ListSchemaImageCell.swift in Sources */,
 				78251E9E26AD810300C736A6 /* ListSchemeRouter.swift in Sources */,
@@ -1189,6 +1229,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		78C305FA26B4C17A002A9529 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1201,6 +1249,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 78251E8026ACBB2000C736A6 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		78C305FB26B4C17A002A9529 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78C305FA26B4C17A002A9529 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
